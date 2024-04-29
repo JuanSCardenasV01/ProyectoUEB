@@ -144,4 +144,142 @@ public class VentanaRegister extends JFrame {
 
 	}
 
+	public JPanel getPanelLogin() {
+		return panelLogin;
+	}
+
+	public void setPanelLogin(JPanel panelLogin) {
+		this.panelLogin = panelLogin;
+	}
+
+	public JLabel getTextTittle() {
+		return textTittle;
+	}
+
+	public void setTextTittle(JLabel textTittle) {
+		this.textTittle = textTittle;
+	}
+
+	public JLabel getTextName() {
+		return textName;
+	}
+
+	public void setTextName(JLabel textName) {
+		this.textName = textName;
+	}
+
+	public JLabel getTextUser() {
+		return textUser;
+	}
+
+	public void setTextUser(JLabel textUser) {
+		this.textUser = textUser;
+	}
+
+	public JLabel getTextPassword() {
+		return textPassword;
+	}
+
+	public void setTextPassword(JLabel textPassword) {
+		this.textPassword = textPassword;
+	}
+
+	public JLabel getTextGender() {
+		return textGender;
+	}
+
+	public void setTextGender(JLabel textGender) {
+		this.textGender = textGender;
+	}
+
+	public JLabel getLogo() {
+		return logo;
+	}
+
+	public void setLogo(JLabel logo) {
+		this.logo = logo;
+	}
+
+	public JTextField getFieldName() {
+		return fieldName;
+	}
+
+	public void setFieldName(JTextField fieldName) {
+		this.fieldName = fieldName;
+	}
+
+	public JTextField getFieldUser() {
+		return fieldUser;
+	}
+
+	public void setFieldUser(JTextField fieldUser) {
+		this.fieldUser = fieldUser;
+	}
+
+	public JPasswordField getFieldPassword() {
+		return fieldPassword;
+	}
+
+	public void setFieldPassword(JPasswordField fieldPassword) {
+		this.fieldPassword = fieldPassword;
+	}
+
+	public JComboBox<String> getComboBox() {
+		return comboBox;
+	}
+
+	public void setComboBox(JComboBox<String> comboBox) {
+		this.comboBox = comboBox;
+	}
+
+	public JButton getBtnBack() {
+		return btnBack;
+	}
+
+	public void setBtnBack(JButton btnBack) {
+		this.btnBack = btnBack;
+	}
+
+	public JButton getBtnRegister() {
+		return btnRegister;
+	}
+
+	public void setBtnRegister(JButton btnRegister) {
+		this.btnRegister = btnRegister;
+	}
+
+	public JSeparator getLine1() {
+		return line1;
+	}
+
+	public void setLine1(JSeparator line1) {
+		this.line1 = line1;
+	}
+
+	public JSeparator getLine2() {
+		return line2;
+	}
+
+	public void setLine2(JSeparator line2) {
+		this.line2 = line2;
+	}
+
+	public JSeparator getLine3() {
+		return line3;
+	}
+
+	public void setLine3(JSeparator line3) {
+		this.line3 = line3;
+	}
+
+	public String[] getSexo() {
+		return sexo;
+	}
+
+	public void setSexo(String[] sexo) {
+		this.sexo = sexo;
+	}
+	
+	
+
 }

@@ -29,6 +29,8 @@ public class Controlador implements ActionListener {
 		vF.getVenLog().getBtnLogin().setActionCommand("btnLogin");
 		vF.getVenLog().getBtnRegister().addActionListener(this);
 		vF.getVenLog().getBtnRegister().setActionCommand("btnRegister");
+		vF.getVenRe().getBtnBack().addActionListener(this);
+		vF.getVenRe().getBtnBack().setActionCommand("btnBack");
 
 	}
 
@@ -49,7 +51,14 @@ public class Controlador implements ActionListener {
 		case "btnRegister":{
 			vF.getVenLog().setVisible(false);
 			vF.getVenRe().setVisible(true);
+			break;
 		}
+		case "btnBack":{
+			vF.getVenLog().setVisible(true);
+			vF.getVenRe().setVisible(false);
+			break;
+		}
+		
 		}
 
 	}
