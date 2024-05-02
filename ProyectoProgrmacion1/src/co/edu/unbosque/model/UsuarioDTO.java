@@ -1,5 +1,5 @@
 package co.edu.unbosque.model;
-
+import java.io.Serializable;
 public class UsuarioDTO {
 private String genero;
 private String correo;
