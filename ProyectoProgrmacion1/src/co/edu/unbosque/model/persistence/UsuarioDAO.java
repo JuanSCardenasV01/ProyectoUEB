@@ -8,8 +8,8 @@ import co.edu.unbosque.model.UsuarioDTO;
 
 public class UsuarioDAO implements CRUDOperation <UsuarioDTO> {
 private ArrayList<UsuarioDTO> list;
-private final String FILE_NAME = "datos/Ususario.csv";
-private final String SERIALIZED_FILE_NAME = "datos/Ususario.maap";
+private final String FILE_NAME = "datos/Usuario.csv";
+private final String SERIALIZED_FILE_NAME = "datos/Usuario.maap";
 
 public UsuarioDAO() {
 	// TODO Auto-generated constructor stub
@@ -74,7 +74,7 @@ public String checkIndex(int index) {
 public UsuarioDTO getLast() {
 	return list.get(list.size() - 1);
 }
-
+@Override
 public void create(UsuarioDTO data) {
 	list.add(data);
 	FileHandler.abrirYEscribirSerializado(SERIALIZED_FILE_NAME, list);

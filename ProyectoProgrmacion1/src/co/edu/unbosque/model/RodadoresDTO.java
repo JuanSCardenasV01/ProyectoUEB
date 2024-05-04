@@ -37,6 +37,49 @@ public RodadoresDTO(String genero, String correo, String contraseña, String nom
 	this.equipo = equipo;
 	this.pais = pais;
 }
+
+public float getVelocidadPromedioPendiente() {
+	return velocidadPromedioPendiente;
+}
+public void setVelocidadPromedioPendiente(float velocidadPromedioPendiente) {
+	this.velocidadPromedioPendiente = velocidadPromedioPendiente;
+}
+public int getId() {
+	return id;
+}
+public void setId(int id) {
+	this.id = id;
+}
+public int getTiempoAcumulado() {
+	return tiempoAcumulado;
+}
+public void setTiempoAcumulado(int tiempoAcumulado) {
+	this.tiempoAcumulado = tiempoAcumulado;
+}
+public String getEspecialidad() {
+	return especialidad;
+}
+public void setEspecialidad(String especialidad) {
+	this.especialidad = especialidad;
+}
+public String getContextura() {
+	return contextura;
+}
+public void setContextura(String contextura) {
+	this.contextura = contextura;
+}
+public String getEquipo() {
+	return equipo;
+}
+public void setEquipo(String equipo) {
+	this.equipo = equipo;
+}
+public String getPais() {
+	return pais;
+}
+public void setPais(String pais) {
+	this.pais = pais;
+}
 @Override
 public String toString() {
 	return "RodadoresDTO [velocidadPromedioPendiente=" + velocidadPromedioPendiente + ", id=" + id
