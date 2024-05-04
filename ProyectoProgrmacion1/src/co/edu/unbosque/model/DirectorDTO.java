@@ -23,7 +23,6 @@ public String getNacionalidad() {
 public void setNacionalidad(String nacionalidad) {
 	this.nacionalidad = nacionalidad;
 }
-
 @Override
 public String toString() {
 	return "DirectorDTO [nacionalidad=" + nacionalidad + ", getGenero()=" + getGenero() + ", getCorreo()=" + getCorreo()

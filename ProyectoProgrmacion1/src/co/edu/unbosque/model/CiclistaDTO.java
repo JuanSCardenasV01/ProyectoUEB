@@ -71,8 +71,8 @@ public void setPais(String pais) {
 }
 @Override
 public String toString() {
-	return "CiclistaDTO [id=" + id + ", tiempoAcumulado=" + tiempoAcumulado + ", especialidad=" + especialidad
-			+ ", contextura=" + contextura + ", equipo=" + equipo + ", pais=" + pais + "]";
+	return "----Ciclista----- \nid: " + id + "\nTiempo Acumulado: " + tiempoAcumulado + "\nEspecialidad: " + especialidad
+			+ "\nContextura: " + contextura + "\nEquipo: " + equipo + "\nPais: " + pais;
 }
 
 }
