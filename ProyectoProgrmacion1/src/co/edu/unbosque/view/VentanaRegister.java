@@ -23,11 +23,11 @@ public class VentanaRegister extends JFrame {
 	private JLabel textUser;
 	private JLabel textPassword;
 	private JLabel textGender;
-	private JLabel logo;
 	private JTextField fieldName;
 	private JTextField fieldUser;
 	private JPasswordField fieldPassword;
-	private JComboBox<String> comboBox;
+	private JComboBox<String> comboBoxGender;
+	private JComboBox<String> comboBoxOcupation;
 	private JButton btnBack;
 	private JButton btnRegister;
 	private JSeparator line1;
@@ -41,21 +41,13 @@ public class VentanaRegister extends JFrame {
 		setLocationRelativeTo(null);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 
-		logo = new JLabel();
-		logo.setBounds(600, 0, 150, 150);
-
-		ImageIcon img = new ImageIcon("src/co/edu/unbosque/view/image/rick.gif");
-		Icon icon = new ImageIcon(
-				img.getImage().getScaledInstance(logo.getWidth(), logo.getHeight(), Image.SCALE_DEFAULT));
-		logo.setIcon(icon);
-
 		panelLogin = new JPanel();
 		panelLogin.setLayout(null);
 		panelLogin.setBounds(0, 0, 800, 500);
 		panelLogin.setBackground(new Color(255, 255, 255));
 
 		textTittle = new JLabel();
-		textTittle.setText("REGISTER TO NAME COMPANY");
+		textTittle.setText("REGISTER TO ISUCI");
 		textTittle.setBounds(100, 20, 500, 70);
 		textTittle.setForeground(new Color(118, 116, 103));
 		textTittle.setFont(new Font("Tahoma", Font.BOLD, 30));
@@ -75,7 +67,7 @@ public class VentanaRegister extends JFrame {
 		line1.setForeground(Color.black);
 
 		textUser = new JLabel();
-		textUser.setText("User");
+		textUser.setText("Mail");
 		textUser.setBounds(80, 225, 50, 30);
 		textUser.setFont(new Font("Tahoma", Font.BOLD, 15));
 
@@ -107,9 +99,9 @@ public class VentanaRegister extends JFrame {
 		textGender.setBounds(420, 225, 90, 30);
 		textGender.setFont(new Font("Tahoma", Font.BOLD, 15));
 
-		comboBox = new JComboBox<>(sexo);
-		comboBox.setBounds(420, 270, 100, 20);
-		comboBox.setBorder(null);
+		comboBoxGender = new JComboBox<>(sexo);
+		comboBoxGender.setBounds(420, 270, 100, 20);
+		comboBoxGender.setBorder(null);
 
 		btnBack = new JButton("Back");
 		btnBack.setBounds(420, 380, 180, 30);
@@ -125,7 +117,6 @@ public class VentanaRegister extends JFrame {
 
 		add(panelLogin);
 		panelLogin.add(textTittle);
-		panelLogin.add(logo);
 		panelLogin.add(textName);
 		panelLogin.add(fieldName);
 		panelLogin.add(line1);
@@ -138,7 +129,7 @@ public class VentanaRegister extends JFrame {
 		panelLogin.add(textPassword);
 		panelLogin.add(fieldPassword);
 		panelLogin.add(textGender);
-		panelLogin.add(comboBox);
+		panelLogin.add(comboBoxGender);
 		panelLogin.add(btnBack);
 		panelLogin.add(btnRegister);
 
@@ -192,13 +183,6 @@ public class VentanaRegister extends JFrame {
 		this.textGender = textGender;
 	}
 
-	public JLabel getLogo() {
-		return logo;
-	}
-
-	public void setLogo(JLabel logo) {
-		this.logo = logo;
-	}
 
 	public JTextField getFieldName() {
 		return fieldName;
@@ -225,11 +209,11 @@ public class VentanaRegister extends JFrame {
 	}
 
 	public JComboBox<String> getComboBox() {
-		return comboBox;
+		return comboBoxGender;
 	}
 
 	public void setComboBox(JComboBox<String> comboBox) {
-		this.comboBox = comboBox;
+		this.comboBoxGender = comboBox;
 	}
 
 	public JButton getBtnBack() {

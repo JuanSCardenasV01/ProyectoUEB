@@ -112,6 +112,15 @@ public String delete(int index) {
 	escribirArchivo();
 	return "Usuario en el indice " + index + " eliminado con exito";
 }
+
+public UsuarioDTO buscarUsuario(String nombreUsuario, String contraseña) {
+    for (UsuarioDTO usuario : list) {
+        if (usuario.getNombre().equals(nombreUsuario) && usuario.getContraseña().equals(contraseña)) {
+            return usuario; // Devuelve el usuario si las credenciales coinciden
+        }
+    }
+    return null; // Devuelve null si no se encuentra el usuario con las credenciales dadas
+}
 public ArrayList<UsuarioDTO> getList() {
 	return list;
 }

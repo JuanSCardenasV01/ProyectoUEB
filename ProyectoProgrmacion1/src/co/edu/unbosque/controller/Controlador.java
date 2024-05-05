@@ -3,18 +3,24 @@ package co.edu.unbosque.controller;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.ComboBoxEditor;
+import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
 
 import org.w3c.dom.UserDataHandler;
 
+import co.edu.unbosque.model.ModelFacade;
+import co.edu.unbosque.model.UsuarioDTO;
 import co.edu.unbosque.view.ViewFacade;
 
 public class Controlador implements ActionListener {
 
 	private ViewFacade vF;
+	private ModelFacade mF;
 
 	public Controlador() {
 		vF = new ViewFacade();
+		mF = new ModelFacade();
 		asignarLectores();
 
 	}
@@ -28,7 +34,7 @@ public class Controlador implements ActionListener {
 		vF.getVenLog().getBtnLogin().addActionListener(this);
 		vF.getVenLog().getBtnLogin().setActionCommand("btnLogin");
 		vF.getVenLog().getBtnRegister().addActionListener(this);
-		vF.getVenLog().getBtnRegister().setActionCommand("btnRegister");
+		vF.getVenLog().getBtnRegister().setActionCommand("btnVRegister");
 		vF.getVenRe().getBtnBack().addActionListener(this);
 		vF.getVenRe().getBtnBack().setActionCommand("btnBack");
 		vF.getVenPA().getBtnLogout().addActionListener(this);
@@ -41,6 +47,8 @@ public class Controlador implements ActionListener {
 		vF.getVenPA().getBtn3().setActionCommand("btn3");
 		vF.getVenPA().getBtn4().addActionListener(this);
 		vF.getVenPA().getBtn4().setActionCommand("btn4");
+		vF.getVenRe().getBtnRegister().addActionListener(this);
+		vF.getVenRe().getBtnRegister().setActionCommand("btnRegister");
 
 	}
 
@@ -49,16 +57,31 @@ public class Controlador implements ActionListener {
 		switch (e.getActionCommand()) {
 
 		case "btnLogin": {
-			vF.getVenLog().setVisible(false);
-			String user = vF.getVenLog().getFieldUser().getText();
-			String password = vF.getVenLog().getFieldPassword().getText();
-			if (user.equals("admin") && password.equals("123")) {
-				vF.getVenPA().setVisible(true);
-				break;
-			}
-			break;
+//			vF.getVenLog().setVisible(false);
+//			String user = vF.getVenLog().getFieldUser().getText();
+//			String password = vF.getVenLog().getFieldPassword().getText();
+//			if (user.equals("admin") && password.equals("123")) {
+//				vF.getVenPA().setVisible(true);
+//				break;
+//			}
+//			break;
+			 vF.getVenLog().setVisible(false);
+			    String user = vF.getVenLog().getFieldUser().getText();
+			    String password = vF.getVenLog().getFieldPassword().getText();
+			    UsuarioDTO usuario = mF.getUsuarioDAO().buscarUsuario(user, password); // Implementa este método en tu DAO
+
+			    if (usuario != null) {
+			        if (user.equals("admin") && password.equals("123")) {
+			            vF.getVenPA().setVisible(true); // Mostrar panel de administrador
+			        } else {
+			        	JOptionPane.showMessageDialog(null, null, "Panel en Proceso", JOptionPane.INFORMATION_MESSAGE);
+			        }
+			    } else {
+			        JOptionPane.showMessageDialog(null, "Usuario o contraseña incorrectos", "Error de inicio de sesión", JOptionPane.ERROR_MESSAGE);
+			    }
+			   
 		}
-		case "btnRegister":{
+		case "btnVRegister":{
 			vF.getVenLog().setVisible(false);
 			vF.getVenRe().setVisible(true);
 			break;
@@ -108,6 +131,16 @@ public class Controlador implements ActionListener {
             // Mostrar el panel correspondiente
             vF.getVenPA().getPanel4().setVisible(true);
             break;
+        }
+        
+        case"btnRegister":{
+        	String nombre = vF.getVenRe().getFieldName().getText();
+        	String correo = vF.getVenRe().getFieldUser().getText();
+        	String contraseña = vF.getVenRe().getFieldPassword().getText();
+        	String genero = (String) vF.getVenRe().getComboBox().getSelectedItem();
+        	mF.getUsuarioDAO().create(new UsuarioDTO(genero, correo, contraseña, nombre));
+        	JOptionPane.showMessageDialog(null, null, "Usuario Creado", JOptionPane.INFORMATION_MESSAGE);
+	
         }
 		
 		
