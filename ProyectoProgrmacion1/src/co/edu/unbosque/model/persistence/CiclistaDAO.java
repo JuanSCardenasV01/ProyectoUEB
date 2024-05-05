@@ -12,7 +12,7 @@ public class CiclistaDAO implements CRUDOperation <CiclistaDTO>{
 	public CiclistaDAO() {
 		// TODO Auto-generated constructor stub
 		list = new ArrayList<>();
-		leerArchivo();
+	
 		leerDesdeArchivoSerializado();
 		escribirArchivo();
 	}
@@ -84,13 +84,13 @@ public class CiclistaDAO implements CRUDOperation <CiclistaDTO>{
 	public CiclistaDTO getLast() {
 		return list.get(list.size() - 1);
 	}
-
+@Override
 	public void create(CiclistaDTO data) {
 		list.add(data);
 		FileHandler.abrirYEscribirSerializado(SERIALIZED_FILE_NAME, list);
 		escribirArchivo();
 	}
-
+@Override
 	public String readAll() {
 		StringBuilder sb = new StringBuilder("Lista de Ciclistas \n");
 		list.forEach((e) -> {
@@ -98,7 +98,7 @@ public class CiclistaDAO implements CRUDOperation <CiclistaDTO>{
 		});
 		return sb.toString();
 	}
-
+@Override
 	public String update(int index, CiclistaDTO newData) {
 		if (index < 0) {
 			return "Posiciones no pueden ser negativas";
@@ -110,7 +110,7 @@ public class CiclistaDAO implements CRUDOperation <CiclistaDTO>{
 		escribirArchivo();
 		return "Ciclista actualizada con éxito";
 	}
-
+@Override
 	public String delete(int index) {
 		if (index < 0) {
 			return "Posiciones no pueden ser negativas";

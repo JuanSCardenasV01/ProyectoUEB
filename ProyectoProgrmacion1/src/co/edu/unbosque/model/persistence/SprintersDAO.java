@@ -12,7 +12,7 @@ public class SprintersDAO implements CRUDOperation <SprintersDTO> {
 	public SprintersDAO() {
 		// TODO Auto-generated constructor stub
 		list = new ArrayList<>();
-		leerArchivo();
+	
 		leerDesdeArchivoSerializado();
 		escribirArchivo();
 	}

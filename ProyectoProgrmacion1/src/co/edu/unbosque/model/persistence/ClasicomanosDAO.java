@@ -12,7 +12,7 @@ public class ClasicomanosDAO implements CRUDOperation <ClasicomanosDTO>{
 	public ClasicomanosDAO() {
 		// TODO Auto-generated constructor stub
 		list = new ArrayList<>();
-		leerArchivo();
+	
 		leerDesdeArchivoSerializado();
 		escribirArchivo();
 	}

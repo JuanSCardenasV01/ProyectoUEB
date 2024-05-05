@@ -14,7 +14,7 @@ private final String SERIALIZED_FILE_NAME = "datos/Usuario.maap";
 public UsuarioDAO() {
 	// TODO Auto-generated constructor stub
 	list = new ArrayList<>();
-	leerArchivo();
+	
 	leerDesdeArchivoSerializado();
 	escribirArchivo();
 }

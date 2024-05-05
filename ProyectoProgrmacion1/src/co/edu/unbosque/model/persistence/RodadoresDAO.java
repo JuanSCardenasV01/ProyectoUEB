@@ -13,7 +13,7 @@ public class RodadoresDAO implements CRUDOperation <RodadoresDTO> {
 	public RodadoresDAO() {
 		// TODO Auto-generated constructor stub
 		list = new ArrayList<>();
-		leerArchivo();
+	
 		leerDesdeArchivoSerializado();
 		escribirArchivo();
 	}

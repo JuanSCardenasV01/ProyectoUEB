@@ -13,7 +13,7 @@ public class GregarioDAO implements CRUDOperation <GregarioDTO>{
 	public GregarioDAO() {
 		// TODO Auto-generated constructor stub
 		list = new ArrayList<>();
-		leerArchivo();
+	
 		leerDesdeArchivoSerializado();
 		escribirArchivo();
 	}

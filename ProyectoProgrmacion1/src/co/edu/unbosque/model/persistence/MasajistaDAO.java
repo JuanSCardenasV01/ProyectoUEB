@@ -12,7 +12,7 @@ public class MasajistaDAO implements CRUDOperation<MasajistaDTO>{
 	public MasajistaDAO() {
 		// TODO Auto-generated constructor stub
 		list = new ArrayList<>();
-		leerArchivo();
+	
 		leerDesdeArchivoSerializado();
 		escribirArchivo();
 	}

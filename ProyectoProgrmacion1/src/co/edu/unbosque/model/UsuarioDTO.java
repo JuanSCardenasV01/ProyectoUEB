@@ -1,6 +1,10 @@
 package co.edu.unbosque.model;
-
-public class UsuarioDTO {
+import java.io.Serializable;
+public class UsuarioDTO implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private String genero;
 	private String correo;
 	private String contraseña;

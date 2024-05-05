@@ -12,7 +12,7 @@ public class EscaladorDAO implements CRUDOperation<EscaladorDTO> {
 	public EscaladorDAO() {
 		// TODO Auto-generated constructor stub
 		list = new ArrayList<>();
-		leerArchivo();
+		
 		leerDesdeArchivoSerializado();
 		escribirArchivo();
 	}

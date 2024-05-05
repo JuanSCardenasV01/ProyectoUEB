@@ -12,7 +12,7 @@ public class ContrarrelojistaDAO implements CRUDOperation <ContrarrelojistaDTO>{
 	public ContrarrelojistaDAO() {
 		// TODO Auto-generated constructor stub
 		list = new ArrayList<>();
-		leerArchivo();
+	
 		leerDesdeArchivoSerializado();
 		escribirArchivo();
 	}
