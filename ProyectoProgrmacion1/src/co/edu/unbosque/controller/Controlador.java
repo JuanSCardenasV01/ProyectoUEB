@@ -78,8 +78,9 @@ public class Controlador implements ActionListener {
 			        }
 			    } else {
 			        JOptionPane.showMessageDialog(null, "Usuario o contraseña incorrectos", "Error de inicio de sesión", JOptionPane.ERROR_MESSAGE);
+			        
 			    }
-			   
+			  break; 
 		}
 		case "btnVRegister":{
 			vF.getVenLog().setVisible(false);
