@@ -26,7 +26,7 @@ public class Controlador implements ActionListener {
 	}
 
 	public void run() {
-		vF.getVenLog().setVisible(true);
+		vF.getVenRe().setVisible(true);
 
 	}
 
@@ -57,14 +57,6 @@ public class Controlador implements ActionListener {
 		switch (e.getActionCommand()) {
 
 		case "btnLogin": {
-//			vF.getVenLog().setVisible(false);
-//			String user = vF.getVenLog().getFieldUser().getText();
-//			String password = vF.getVenLog().getFieldPassword().getText();
-//			if (user.equals("admin") && password.equals("123")) {
-//				vF.getVenPA().setVisible(true);
-//				break;
-//			}
-//			break;
 			 vF.getVenLog().setVisible(false);
 			    String user = vF.getVenLog().getFieldUser().getText();
 			    String password = vF.getVenLog().getFieldPassword().getText();

@@ -23,6 +23,7 @@ public class VentanaRegister extends JFrame {
 	private JLabel textUser;
 	private JLabel textPassword;
 	private JLabel textGender;
+	private JLabel textOcupation;
 	private JTextField fieldName;
 	private JTextField fieldUser;
 	private JPasswordField fieldPassword;
@@ -33,7 +34,8 @@ public class VentanaRegister extends JFrame {
 	private JSeparator line1;
 	private JSeparator line2;
 	private JSeparator line3;
-	private String[] sexo = { "Masculino", "Femenino", "No decirlo", "Batman" };
+	private String[] gender = { "Masculino", "Femenino", "No decirlo", "Batman" };
+	private String[] ocupation = { "Masajista", "Director", "Ciclicista", "Clasicomano","Contrarelojista", "Escalador", "Gregario", "Rodador","Sprinter",};
 
 	public VentanaRegister() {
 		setSize(800, 500);
@@ -48,60 +50,69 @@ public class VentanaRegister extends JFrame {
 
 		textTittle = new JLabel();
 		textTittle.setText("REGISTER TO ISUCI");
-		textTittle.setBounds(100, 20, 500, 70);
+		textTittle.setBounds(250, 10, 320, 40);
 		textTittle.setForeground(new Color(118, 116, 103));
 		textTittle.setFont(new Font("Tahoma", Font.BOLD, 30));
 
 		textName = new JLabel();
 		textName.setText("Name");
-		textName.setBounds(80, 145, 50, 30);
+		textName.setBounds(80, 50, 50, 30);
 		textName.setFont(new Font("Tahoma", Font.BOLD, 15));
 
 		fieldName = new JTextField();
-		fieldName.setBounds(80, 180, 320, 25);
+		fieldName.setBounds(80, 75, 320, 25);
 		fieldName.setFont(new Font("Tahoma", 0, 15));
 		fieldName.setBorder(null);
 
 		line1 = new JSeparator();
-		line1.setBounds(80, 205, 250, 20);
+		line1.setBounds(80, 105, 250, 20);
 		line1.setForeground(Color.black);
 
 		textUser = new JLabel();
 		textUser.setText("Mail");
-		textUser.setBounds(80, 225, 50, 30);
+		textUser.setBounds(80, 120, 50, 30);
 		textUser.setFont(new Font("Tahoma", Font.BOLD, 15));
 
 		fieldUser = new JTextField();
-		fieldUser.setBounds(80, 260, 320, 25);
+		fieldUser.setBounds(80, 145, 320, 25);
 		fieldUser.setFont(new Font("Tahoma", 0, 15));
 		fieldUser.setBorder(null);
 
 		line2 = new JSeparator();
-		line2.setBounds(80, 285, 250, 20);
+		line2.setBounds(80, 175, 250, 20);
 		line2.setForeground(Color.black);
 
 		textPassword = new JLabel();
 		textPassword.setText("Password");
-		textPassword.setBounds(420, 145, 90, 30);
+		textPassword.setBounds(80, 190, 90, 30);
 		textPassword.setFont(new Font("Tahoma", Font.BOLD, 15));
 
 		fieldPassword = new JPasswordField();
-		fieldPassword.setBounds(420, 180, 320, 25);
+		fieldPassword.setBounds(80, 215, 320, 25);
 		fieldPassword.setFont(new Font("", 0, 25));
 		fieldPassword.setBorder(null);
 
 		line3 = new JSeparator();
-		line3.setBounds(420, 205, 250, 20);
+		line3.setBounds(80, 245, 250, 20);
 		line3.setForeground(Color.black);
 
 		textGender = new JLabel();
 		textGender.setText("Gender");
-		textGender.setBounds(420, 225, 90, 30);
+		textGender.setBounds(80, 260, 90, 30);
 		textGender.setFont(new Font("Tahoma", Font.BOLD, 15));
 
-		comboBoxGender = new JComboBox<>(sexo);
-		comboBoxGender.setBounds(420, 270, 100, 20);
+		comboBoxGender = new JComboBox<>(gender);
+		comboBoxGender.setBounds(80, 310, 100, 20);
 		comboBoxGender.setBorder(null);
+		
+		textOcupation = new JLabel();
+		textOcupation.setText("Ocupation");
+		textOcupation.setBounds(230, 260, 90, 30);
+		textOcupation.setFont(new Font("Tahoma", Font.BOLD, 15));
+
+		comboBoxOcupation = new JComboBox<>(ocupation);
+		comboBoxOcupation.setBounds(230, 310, 100, 20);
+		comboBoxOcupation.setBorder(null);
 
 		btnBack = new JButton("Back");
 		btnBack.setBounds(420, 380, 180, 30);
@@ -130,6 +141,8 @@ public class VentanaRegister extends JFrame {
 		panelLogin.add(fieldPassword);
 		panelLogin.add(textGender);
 		panelLogin.add(comboBoxGender);
+		panelLogin.add(textOcupation);
+		panelLogin.add(comboBoxOcupation);
 		panelLogin.add(btnBack);
 		panelLogin.add(btnRegister);
 
@@ -256,13 +269,47 @@ public class VentanaRegister extends JFrame {
 		this.line3 = line3;
 	}
 
-	public String[] getSexo() {
-		return sexo;
+	public JLabel getTextOcupation() {
+		return textOcupation;
 	}
 
-	public void setSexo(String[] sexo) {
-		this.sexo = sexo;
+	public void setTextOcupation(JLabel textOcupation) {
+		this.textOcupation = textOcupation;
 	}
+
+	public JComboBox<String> getComboBoxGender() {
+		return comboBoxGender;
+	}
+
+	public void setComboBoxGender(JComboBox<String> comboBoxGender) {
+		this.comboBoxGender = comboBoxGender;
+	}
+
+	public JComboBox<String> getComboBoxOcupation() {
+		return comboBoxOcupation;
+	}
+
+	public void setComboBoxOcupation(JComboBox<String> comboBoxOcupation) {
+		this.comboBoxOcupation = comboBoxOcupation;
+	}
+
+	public String[] getGender() {
+		return gender;
+	}
+
+	public void setGender(String[] gender) {
+		this.gender = gender;
+	}
+
+	public String[] getOcupation() {
+		return ocupation;
+	}
+
+	public void setOcupation(String[] ocupation) {
+		this.ocupation = ocupation;
+	}
+
+
 	
 	
 
