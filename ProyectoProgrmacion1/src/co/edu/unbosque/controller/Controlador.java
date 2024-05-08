@@ -1,3 +1,7 @@
+//Esta clase es el controlador de la aplicación. Se encarga de manejar los eventos
+//generados por la vista (ventanas) e interactuar con el modelo (datos) a través de la fachada del modelo.
+//implementa la interfaz `ActionListener` para responder a los eventos de los botones.
+
 package co.edu.unbosque.controller;
 
 import java.awt.event.ActionEvent;
@@ -19,17 +23,19 @@ public class Controlador implements ActionListener {
 	private ModelFacade mF;
 
 	public Controlador() {
+		//Fachada de la vista que provee métodos para acceder a los elementos de la interfaz gráfica.
 		vF = new ViewFacade();
+	    //Fachada del modelo que provee métodos para acceder y manipular los datos de la aplicación.
 		mF = new ModelFacade();
 		asignarLectores();
 
 	}
-
+	//Inicia la aplicación haciendo visible la ventana de login.
 	public void run() {
 		vF.getVenRe().setVisible(true);
 
 	}
-
+	//Asigna los lectoresa los botones de las distintas ventanas.
 	private void asignarLectores() {
 		vF.getVenLog().getBtnLogin().addActionListener(this);
 		vF.getVenLog().getBtnLogin().setActionCommand("btnLogin");
@@ -51,17 +57,19 @@ public class Controlador implements ActionListener {
 		vF.getVenRe().getBtnRegister().setActionCommand("btnRegister");
 
 	}
-
+//	Responde a los eventos generados por los botones de la interfaz. Este método se invoca
+//    cada vez que se presiona un botón u otro elemento con un escucha de eventos asignado.
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		switch (e.getActionCommand()) {
-
+		//oculta la ventana de login y obtener credenciales del usuario
 		case "btnLogin": {
 			 vF.getVenLog().setVisible(false);
 			    String user = vF.getVenLog().getFieldUser().getText();
 			    String password = vF.getVenLog().getFieldPassword().getText();
 			    UsuarioDTO usuario = mF.getUsuarioDAO().buscarUsuario(user, password); // Implementa este método en tu DAO
 
+                // Buscar el usuario en el modelo 
 			    if (usuario != null) {
 			        if (user.equals("admin") && password.equals("123")) {
 			            vF.getVenPA().setVisible(true); // Mostrar panel de administrador
@@ -74,16 +82,19 @@ public class Controlador implements ActionListener {
 			    }
 			  break; 
 		}
+		//mantiene la ventana login oculta y muestra la de registro.
 		case "btnVRegister":{
 			vF.getVenLog().setVisible(false);
 			vF.getVenRe().setVisible(true);
 			break;
 		}
+		//muestra la ventana login y oculta la de registro.
 		case "btnBack":{
 			vF.getVenRe().setVisible(false);
 			vF.getVenLog().setVisible(true);
 			break;
 		}
+		//oculta el panel administrador y muestra la ventana login
 		case "btnLogout":{
 			vF.getVenPA().setVisible(false);
 			vF.getVenLog().setVisible(true);
@@ -126,14 +137,22 @@ public class Controlador implements ActionListener {
             break;
         }
         
-        case"btnRegister":{
-        	String nombre = vF.getVenRe().getFieldName().getText();
-        	String correo = vF.getVenRe().getFieldUser().getText();
-        	String contraseña = vF.getVenRe().getFieldPassword().getText();
-        	String genero = (String) vF.getVenRe().getComboBox().getSelectedItem();
-        	mF.getUsuarioDAO().create(new UsuarioDTO(genero, correo, contraseña, nombre));
-        	JOptionPane.showMessageDialog(null, null, "Usuario Creado", JOptionPane.INFORMATION_MESSAGE);
-	
+        case "btnRegister": { // Caso para el botón "btnRegister"
+            // Obtener los datos del formulario de registro
+            String nombre = vF.getVenRe().getFieldName().getText();
+            String correo = vF.getVenRe().getFieldUser().getText();
+            String contraseña = vF.getVenRe().getFieldPassword().getText();
+            String genero = (String) vF.getVenRe().getComboBox().getSelectedItem();
+
+            // Crear un objeto UsuarioDTO con los datos del formulario
+            UsuarioDTO usuario = new UsuarioDTO(genero, correo, contraseña, nombre);
+
+            // Llamar al método del DAO para crear el usuario en el modelo (implementar en tu DAO)
+            mF.getUsuarioDAO().create(usuario);
+
+            // Mostrar un mensaje de confirmación al usuario
+            JOptionPane.showMessageDialog(null, null, "Usuario Creado", JOptionPane.INFORMATION_MESSAGE);
+            break;
         }
 		
 		
