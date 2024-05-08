@@ -55,6 +55,8 @@ public class Controlador implements ActionListener {
 		vF.getVenPA().getBtn4().setActionCommand("btn4");
 		vF.getVenRe().getBtnRegister().addActionListener(this);
 		vF.getVenRe().getBtnRegister().setActionCommand("btnRegister");
+		vF.getVenRe().getComboBoxOcupation().addActionListener(this);
+		vF.getVenRe().getComboBoxOcupation().setActionCommand("comboBoxG");
 
 	}
 //	Responde a los eventos generados por los botones de la interfaz. Este método se invoca
@@ -64,11 +66,12 @@ public class Controlador implements ActionListener {
 		switch (e.getActionCommand()) {
 		//oculta la ventana de login y obtener credenciales del usuario
 		case "btnLogin": {
-			 vF.getVenLog().setVisible(false);
-			    String user = vF.getVenLog().getFieldUser().getText();
-			    String password = vF.getVenLog().getFieldPassword().getText();
-			    UsuarioDTO usuario = mF.getUsuarioDAO().buscarUsuario(user, password); // Implementa este método en tu DAO
+			vF.getVenLog().setVisible(false);
+			String user = vF.getVenLog().getFieldUser().getText();
+			String password = vF.getVenLog().getFieldPassword().getText();
+			UsuarioDTO usuario = mF.getUsuarioDAO().buscarUsuario(user, password); // Implementa este método en tu DAO
 
+<<<<<<< HEAD
                 // Buscar el usuario en el modelo 
 			    if (usuario != null) {
 			        if (user.equals("admin") && password.equals("123")) {
@@ -81,25 +84,52 @@ public class Controlador implements ActionListener {
 			        
 			    }
 			  break; 
+=======
+			if (usuario != null) {
+				if (user.equals("admin") && password.equals("123")) {
+					vF.getVenPA().setVisible(true); // Mostrar panel de administrador
+				} else {
+					JOptionPane.showMessageDialog(null, null, "Panel en Proceso", JOptionPane.INFORMATION_MESSAGE);
+				}
+			} else {
+				JOptionPane.showMessageDialog(null, "Usuario o contraseña incorrectos", "Error de inicio de sesión",
+						JOptionPane.ERROR_MESSAGE);
+
+			}
+			break;
+>>>>>>> branch 'master' of https://github.com/JuanSCardenasV01/ProyectoUEB.git
 		}
+<<<<<<< HEAD
 		//mantiene la ventana login oculta y muestra la de registro.
 		case "btnVRegister":{
+=======
+		case "btnVRegister": {
+>>>>>>> branch 'master' of https://github.com/JuanSCardenasV01/ProyectoUEB.git
 			vF.getVenLog().setVisible(false);
 			vF.getVenRe().setVisible(true);
 			break;
 		}
+<<<<<<< HEAD
 		//muestra la ventana login y oculta la de registro.
 		case "btnBack":{
+=======
+		case "btnBack": {
+>>>>>>> branch 'master' of https://github.com/JuanSCardenasV01/ProyectoUEB.git
 			vF.getVenRe().setVisible(false);
 			vF.getVenLog().setVisible(true);
 			break;
 		}
+<<<<<<< HEAD
 		//oculta el panel administrador y muestra la ventana login
 		case "btnLogout":{
+=======
+		case "btnLogout": {
+>>>>>>> branch 'master' of https://github.com/JuanSCardenasV01/ProyectoUEB.git
 			vF.getVenPA().setVisible(false);
 			vF.getVenLog().setVisible(true);
 			break;
 		}
+<<<<<<< HEAD
 		case "btn1":{
             // Ocultar todos los paneles
             vF.getVenPA().getPanel2().setVisible(false);
@@ -156,6 +186,73 @@ public class Controlador implements ActionListener {
         }
 		
 		
+=======
+		case "btn1": {
+			// Ocultar todos los paneles
+			vF.getVenPA().getPanel2().setVisible(false);
+			vF.getVenPA().getPanel3().setVisible(false);
+			vF.getVenPA().getPanel4().setVisible(false);
+			// Mostrar el panel correspondiente
+			vF.getVenPA().getPanel1().setVisible(true);
+			break;
+		}
+		case "btn2": {
+			// Ocultar todos los paneles
+			vF.getVenPA().getPanel1().setVisible(false);
+			vF.getVenPA().getPanel3().setVisible(false);
+			vF.getVenPA().getPanel4().setVisible(false);
+			// Mostrar el panel correspondiente
+			vF.getVenPA().getPanel2().setVisible(true);
+			break;
+		}
+		case "btn3": {
+			// Ocultar todos los paneles
+			vF.getVenPA().getPanel1().setVisible(false);
+			vF.getVenPA().getPanel2().setVisible(false);
+			vF.getVenPA().getPanel4().setVisible(false);
+			// Mostrar el panel correspondiente
+			vF.getVenPA().getPanel3().setVisible(true);
+			break;
+		}
+		case "btn4": {
+			// Ocultar todos los paneles
+			vF.getVenPA().getPanel1().setVisible(false);
+			vF.getVenPA().getPanel2().setVisible(false);
+			vF.getVenPA().getPanel3().setVisible(false);
+			// Mostrar el panel correspondiente
+			vF.getVenPA().getPanel4().setVisible(true);
+			break;
+		}
+
+		case "comboBoxG": {
+			String selectedOcupation = (String) vF.getVenRe().getComboBoxOcupation().getSelectedItem();
+			switch (selectedOcupation) {
+			case "Masajista": {
+				vF.getVenRe().getPanelMasseur().setVisible(true);
+				vF.getVenRe().getPanelDirector().setVisible(false);
+				break;
+			}
+			case "Director": {
+				vF.getVenRe().getPanelMasseur().setVisible(false);
+				vF.getVenRe().getPanelDirector().setVisible(true);
+				break;
+			}
+			}
+
+			break;
+		}
+
+		case "btnRegister": {
+			String nombre = vF.getVenRe().getFieldName().getText();
+			String correo = vF.getVenRe().getFieldUser().getText();
+			String contraseña = vF.getVenRe().getFieldPassword().getText();
+			String genero = (String) vF.getVenRe().getComboBox().getSelectedItem();
+			mF.getUsuarioDAO().create(new UsuarioDTO(genero, correo, contraseña, nombre));
+			JOptionPane.showMessageDialog(null, null, "Usuario Creado", JOptionPane.INFORMATION_MESSAGE);
+
+		}
+
+>>>>>>> branch 'master' of https://github.com/JuanSCardenasV01/ProyectoUEB.git
 		}
 
 	}

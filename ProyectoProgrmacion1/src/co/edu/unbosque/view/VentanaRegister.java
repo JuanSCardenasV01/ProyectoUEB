@@ -18,24 +18,40 @@ import javax.swing.JTextField;
 public class VentanaRegister extends JFrame {
 
 	private JPanel panelLogin;
+	private JPanel panelMasseur;
+	private JPanel panelDirector;
+	private JPanel panelCyclist;
+	private JPanel panelClassicalCyclist;
+	private JPanel panelCounterCyclist;
+	private JPanel panelClimber;
+	private JPanel panelGregarious;
+	private JPanel panelRider;
+	private JPanel panelSprinter;
 	private JLabel textTittle;
 	private JLabel textName;
 	private JLabel textUser;
 	private JLabel textPassword;
 	private JLabel textGender;
 	private JLabel textOcupation;
+	private JLabel textMasseur;
+	private JLabel textDirector;
 	private JTextField fieldName;
 	private JTextField fieldUser;
 	private JPasswordField fieldPassword;
 	private JComboBox<String> comboBoxGender;
 	private JComboBox<String> comboBoxOcupation;
+	private JTextField fieldMasseur;
+	private JTextField fieldDirector;
 	private JButton btnBack;
 	private JButton btnRegister;
 	private JSeparator line1;
 	private JSeparator line2;
 	private JSeparator line3;
+	private JSeparator line4;
+	private JSeparator line5;
 	private String[] gender = { "Masculino", "Femenino", "No decirlo", "Batman" };
-	private String[] ocupation = { "Masajista", "Director", "Ciclicista", "Clasicomano","Contrarelojista", "Escalador", "Gregario", "Rodador","Sprinter",};
+	private String[] ocupation = { "Masajista", "Director", "Ciclicista", "Clasicomano", "Contrarelojista", "Escalador",
+			"Gregario", "Rodador", "Sprinter", };
 
 	public VentanaRegister() {
 		setSize(800, 500);
@@ -60,7 +76,7 @@ public class VentanaRegister extends JFrame {
 		textName.setFont(new Font("Tahoma", Font.BOLD, 15));
 
 		fieldName = new JTextField();
-		fieldName.setBounds(80, 75, 320, 25);
+		fieldName.setBounds(80, 75, 250, 25);
 		fieldName.setFont(new Font("Tahoma", 0, 15));
 		fieldName.setBorder(null);
 
@@ -74,7 +90,7 @@ public class VentanaRegister extends JFrame {
 		textUser.setFont(new Font("Tahoma", Font.BOLD, 15));
 
 		fieldUser = new JTextField();
-		fieldUser.setBounds(80, 145, 320, 25);
+		fieldUser.setBounds(80, 145, 250, 25);
 		fieldUser.setFont(new Font("Tahoma", 0, 15));
 		fieldUser.setBorder(null);
 
@@ -88,7 +104,7 @@ public class VentanaRegister extends JFrame {
 		textPassword.setFont(new Font("Tahoma", Font.BOLD, 15));
 
 		fieldPassword = new JPasswordField();
-		fieldPassword.setBounds(80, 215, 320, 25);
+		fieldPassword.setBounds(80, 215, 250, 25);
 		fieldPassword.setFont(new Font("", 0, 25));
 		fieldPassword.setBorder(null);
 
@@ -104,7 +120,7 @@ public class VentanaRegister extends JFrame {
 		comboBoxGender = new JComboBox<>(gender);
 		comboBoxGender.setBounds(80, 310, 100, 20);
 		comboBoxGender.setBorder(null);
-		
+
 		textOcupation = new JLabel();
 		textOcupation.setText("Ocupation");
 		textOcupation.setBounds(230, 260, 90, 30);
@@ -113,7 +129,81 @@ public class VentanaRegister extends JFrame {
 		comboBoxOcupation = new JComboBox<>(ocupation);
 		comboBoxOcupation.setBounds(230, 310, 100, 20);
 		comboBoxOcupation.setBorder(null);
+// PANELES DEL COMOBO BOX
+		panelMasseur = new JPanel();
+		panelMasseur.setLayout(null);
+		panelMasseur.setBounds(400, 50, 350, 300);
+		panelMasseur.setBackground(new Color(255, 255, 255));
+		panelMasseur.setVisible(false);
 
+		textMasseur = new JLabel();
+		textMasseur.setText("Years of Experience");
+		textMasseur.setBounds(0, 100, 150, 30);
+		textMasseur.setFont(new Font("Tahoma", Font.BOLD, 15));
+
+		fieldMasseur = new JTextField();
+		fieldMasseur.setBounds(180, 100, 50, 25);
+		fieldMasseur.setFont(new Font("Tahoma", 0, 15));
+		fieldMasseur.setBorder(null);
+
+		line4 = new JSeparator();
+		line4.setBounds(170, 130, 50, 20);
+		line4.setForeground(Color.black);
+		
+		panelDirector = new JPanel();
+		panelDirector.setLayout(null);
+		panelDirector.setBounds(400, 50, 350, 300);
+		panelDirector.setBackground(new Color(255, 255, 255));
+		panelDirector.setVisible(false);
+
+		textDirector = new JLabel();
+		textDirector.setText("Nacionality");
+		textDirector.setBounds(0, 100, 90, 30);
+		textDirector.setFont(new Font("Tahoma", Font.BOLD, 15));
+
+		fieldDirector = new JTextField();
+		fieldDirector.setBounds(100, 100, 150, 25);
+		fieldDirector.setFont(new Font("Tahoma", 0, 15));
+		fieldDirector.setBorder(null);
+
+		line5 = new JSeparator();
+		line5.setBounds(100, 130, 150, 20);
+		line5.setForeground(Color.black);
+		//Cyclist panel
+		panelCyclist = new JPanel();
+		panelCyclist.setLayout(null);
+		panelCyclist.setBounds(400, 50, 350, 300);
+		panelCyclist.setBackground(new Color(255, 255, 255));
+		panelCyclist.setVisible(false);
+
+		textCyclistId = new JLabel();
+		textCyclistId.setText("Id of the Cyclist");
+		textCyclistId.setBounds(0, 100, 150, 30);
+		textCyclistId.setFont(new Font("Tahoma", Font.BOLD, 15));
+
+		fieldCyclistId = new JTextField();
+		fieldCyclistId.setBounds(180, 100, 50, 25);
+		fieldCyclistId.setFont(new Font("Tahoma", 0, 15));
+		fieldCyclistId.setBorder(null);
+
+		line6 = new JSeparator();
+		line6.setBounds(170, 130, 50, 20);
+		line6.setForeground(Color.black);
+		
+		textCyclistAccumTime = new JLabel();
+		textCyclistAccumTime.setText("Cyclist Accumulated Time");
+		textCyclistAccumTime.setBounds(0, 100, 150, 30);
+		textCyclistAccumTime.setFont(new Font("Tahoma", Font.BOLD, 15));
+
+		fieldCyclistAccumTime = new JTextField();
+		fieldCyclistAccumTime.setBounds(180, 100, 50, 25);
+		fieldCyclistAccumTime.setFont(new Font("Tahoma", 0, 15));
+		fieldCyclistAccumTime.setBorder(null);
+
+		line4 = new JSeparator();
+		line4.setBounds(170, 130, 50, 20);
+		line4.setForeground(Color.black);
+//
 		btnBack = new JButton("Back");
 		btnBack.setBounds(420, 380, 180, 30);
 		btnBack.setBackground(new Color(133, 153, 30));
@@ -127,6 +217,8 @@ public class VentanaRegister extends JFrame {
 		btnRegister.setBorderPainted(false);
 
 		add(panelLogin);
+		panelLogin.add(panelMasseur);
+		panelLogin.add(panelDirector);
 		panelLogin.add(textTittle);
 		panelLogin.add(textName);
 		panelLogin.add(fieldName);
@@ -145,6 +237,12 @@ public class VentanaRegister extends JFrame {
 		panelLogin.add(comboBoxOcupation);
 		panelLogin.add(btnBack);
 		panelLogin.add(btnRegister);
+		panelMasseur.add(textMasseur);
+		panelMasseur.add(fieldMasseur);
+		panelMasseur.add(line4);
+		panelDirector.add(textDirector);
+		panelDirector.add(fieldDirector);
+		panelDirector.add(line5);
 
 	}
 
@@ -195,7 +293,6 @@ public class VentanaRegister extends JFrame {
 	public void setTextGender(JLabel textGender) {
 		this.textGender = textGender;
 	}
-
 
 	public JTextField getFieldName() {
 		return fieldName;
@@ -309,8 +406,100 @@ public class VentanaRegister extends JFrame {
 		this.ocupation = ocupation;
 	}
 
+	public JPanel getPanelMasseur() {
+		return panelMasseur;
+	}
 
-	
-	
+	public void setPanelMasseur(JPanel panelMasseur) {
+		this.panelMasseur = panelMasseur;
+	}
+
+	public JPanel getPanelDirector() {
+		return panelDirector;
+	}
+
+	public void setPanelDirector(JPanel panelDirector) {
+		this.panelDirector = panelDirector;
+	}
+
+	public JPanel getPanelCyclist() {
+		return panelCyclist;
+	}
+
+	public void setPanelCyclist(JPanel panelCyclist) {
+		this.panelCyclist = panelCyclist;
+	}
+
+	public JPanel getPanelClassicalCyclist() {
+		return panelClassicalCyclist;
+	}
+
+	public void setPanelClassicalCyclist(JPanel panelClassicalCyclist) {
+		this.panelClassicalCyclist = panelClassicalCyclist;
+	}
+
+	public JPanel getPanelCounterCyclist() {
+		return panelCounterCyclist;
+	}
+
+	public void setPanelCounterCyclist(JPanel panelCounterCyclist) {
+		this.panelCounterCyclist = panelCounterCyclist;
+	}
+
+	public JPanel getPanelClimber() {
+		return panelClimber;
+	}
+
+	public void setPanelClimber(JPanel panelClimber) {
+		this.panelClimber = panelClimber;
+	}
+
+	public JPanel getPanelGregarious() {
+		return panelGregarious;
+	}
+
+	public void setPanelGregarious(JPanel panelGregarious) {
+		this.panelGregarious = panelGregarious;
+	}
+
+	public JPanel getPanelRider() {
+		return panelRider;
+	}
+
+	public void setPanelRider(JPanel panelRider) {
+		this.panelRider = panelRider;
+	}
+
+	public JPanel getPanelSprinter() {
+		return panelSprinter;
+	}
+
+	public void setPanelSprinter(JPanel panelSprinter) {
+		this.panelSprinter = panelSprinter;
+	}
+
+	public JLabel getTextMasseur() {
+		return textMasseur;
+	}
+
+	public void setTextMasseur(JLabel textMasseur) {
+		this.textMasseur = textMasseur;
+	}
+
+	public JTextField getFieldMasseur() {
+		return fieldMasseur;
+	}
+
+	public void setFieldMasseur(JTextField fieldMasseur) {
+		this.fieldMasseur = fieldMasseur;
+	}
+
+	public JSeparator getLine4() {
+		return line4;
+	}
+
+	public void setLine4(JSeparator line4) {
+		this.line4 = line4;
+	}
 
 }

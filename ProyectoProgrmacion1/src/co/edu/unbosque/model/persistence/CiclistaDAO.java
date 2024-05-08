@@ -25,7 +25,6 @@ public class CiclistaDAO implements CRUDOperation <CiclistaDTO>{
 			sbBuilder.append(list.get(i).getNombre()).append(";");
 			sbBuilder.append(list.get(i).getId());
 			sbBuilder.append(list.get(i).getTiempoAcumulado());
-			sbBuilder.append(list.get(i).getEspecialidad());
 			sbBuilder.append(list.get(i).getContextura());
 			sbBuilder.append(list.get(i).getEquipo());
 			sbBuilder.append(list.get(i).getPais());
@@ -53,10 +52,9 @@ public class CiclistaDAO implements CRUDOperation <CiclistaDTO>{
 			temp.setNombre(columnas[3]);
 			temp.setId(Integer.parseInt(columnas[4]));
 			temp.setTiempoAcumulado(Integer.parseInt(columnas[5]));
-			temp.setEspecialidad(columnas[6]);
-			temp.setContextura(columnas[7]);
-			temp.setEquipo(columnas[8]);
-			temp.setPais(columnas[9]);
+			temp.setContextura(columnas[6]);
+			temp.setEquipo(columnas[7]);
+			temp.setPais(columnas[8]);
 			list.add(temp);
 		}
 	}
