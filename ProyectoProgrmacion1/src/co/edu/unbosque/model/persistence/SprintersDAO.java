@@ -25,7 +25,6 @@ public class SprintersDAO implements CRUDOperation <SprintersDTO> {
 			sbBuilder.append(list.get(i).getNombre()).append(";");
 			sbBuilder.append(list.get(i).getId());
 			sbBuilder.append(list.get(i).getTiempoAcumulado());
-			sbBuilder.append(list.get(i).getEspecialidad());
 			sbBuilder.append(list.get(i).getContextura());
 			sbBuilder.append(list.get(i).getEquipo());
 			sbBuilder.append(list.get(i).getPais());

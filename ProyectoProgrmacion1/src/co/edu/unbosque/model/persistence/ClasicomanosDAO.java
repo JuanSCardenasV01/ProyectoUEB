@@ -25,11 +25,9 @@ public class ClasicomanosDAO implements CRUDOperation <ClasicomanosDTO>{
 			sbBuilder.append(list.get(i).getNombre()).append(";");
 			sbBuilder.append(list.get(i).getId());
 			sbBuilder.append(list.get(i).getTiempoAcumulado());
-			sbBuilder.append(list.get(i).getEspecialidad());
 			sbBuilder.append(list.get(i).getContextura());
 			sbBuilder.append(list.get(i).getEquipo());
 			sbBuilder.append(list.get(i).getPais());
-			sbBuilder.append(list.get(i).getEspecialidad());
 			if (i < list.size() - 1) {
 				sbBuilder.append("\n");
 			}
@@ -54,11 +52,10 @@ public class ClasicomanosDAO implements CRUDOperation <ClasicomanosDTO>{
 			temp.setNombre(columnas[3]);
 			temp.setId(Integer.parseInt(columnas[4]));
 			temp.setTiempoAcumulado(Integer.parseInt(columnas[5]));
-			temp.setEspecialidad(columnas[6]);
-			temp.setContextura(columnas[7]);
-			temp.setEquipo(columnas[8]);
-			temp.setPais(columnas[9]);
-			temp.setVelocidadPromPedaleo(Float.parseFloat(columnas[10]));
+			temp.setContextura(columnas[6]);
+			temp.setEquipo(columnas[7]);
+			temp.setPais(columnas[8]);
+			temp.setVelocidadPromPedaleo(Float.parseFloat(columnas[9]));
 			list.add(temp);
 		}
 	}
@@ -147,4 +144,4 @@ public class ClasicomanosDAO implements CRUDOperation <ClasicomanosDTO>{
 	public void setlist(ArrayList<ClasicomanosDTO> list) {
 		this.list = list;
 	}
-}
+	}

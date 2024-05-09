@@ -34,9 +34,19 @@ public class VentanaRegister extends JFrame {
 	private JLabel textGender;
 	private JLabel textOcupation;
 	private JLabel textMasseur;
+	private JLabel textCyclistAccumTime;
+	private JLabel textCyclistTeam;
+	private JLabel textCyclistId;
+	private JLabel textCyclistContexture;
+	private JLabel textCyclistCountry;
 	private JLabel textDirector;
 	private JTextField fieldName;
 	private JTextField fieldUser;
+	private JTextField fieldCyclistAccumTime;
+	private JTextField fieldCyclistTeam;
+	private JTextField fieldCyclistId;
+	private JTextField fieldCyclistContexture;
+	private JTextField fieldCyclistCountry;
 	private JPasswordField fieldPassword;
 	private JComboBox<String> comboBoxGender;
 	private JComboBox<String> comboBoxOcupation;
@@ -49,6 +59,7 @@ public class VentanaRegister extends JFrame {
 	private JSeparator line3;
 	private JSeparator line4;
 	private JSeparator line5;
+	private JSeparator line6;
 	private String[] gender = { "Masculino", "Femenino", "No decirlo", "Batman" };
 	private String[] ocupation = { "Masajista", "Director", "Ciclicista", "Clasicomano", "Contrarelojista", "Escalador",
 			"Gregario", "Rodador", "Sprinter", };
@@ -200,9 +211,52 @@ public class VentanaRegister extends JFrame {
 		fieldCyclistAccumTime.setFont(new Font("Tahoma", 0, 15));
 		fieldCyclistAccumTime.setBorder(null);
 
-		line4 = new JSeparator();
-		line4.setBounds(170, 130, 50, 20);
-		line4.setForeground(Color.black);
+		line6 = new JSeparator();
+		line6.setBounds(170, 130, 50, 20);
+		line6.setForeground(Color.black);
+	
+		textCyclistContexture = new JLabel();
+		textCyclistContexture.setText("Id of the Cyclist");
+		textCyclistContexture.setBounds(0, 100, 150, 30);
+		textCyclistContexture.setFont(new Font("Tahoma", Font.BOLD, 15));
+
+		fieldCyclistContexture = new JTextField();
+		fieldCyclistContexture.setBounds(180, 100, 50, 25);
+		fieldCyclistContexture.setFont(new Font("Tahoma", 0, 15));
+		fieldCyclistContexture.setBorder(null);
+
+		line6 = new JSeparator();
+		line6.setBounds(170, 130, 50, 20);
+		line6.setForeground(Color.black);
+		
+		textCyclistTeam = new JLabel();
+		textCyclistTeam.setText("Id of the Cyclist");
+		textCyclistTeam.setBounds(0, 100, 150, 30);
+		textCyclistTeam.setFont(new Font("Tahoma", Font.BOLD, 15));
+
+		fieldCyclistTeam = new JTextField();
+		fieldCyclistTeam.setBounds(180, 100, 50, 25);
+		fieldCyclistTeam.setFont(new Font("Tahoma", 0, 15));
+		fieldCyclistTeam.setBorder(null);
+
+		line6 = new JSeparator();
+		line6.setBounds(170, 130, 50, 20);
+		line6.setForeground(Color.black);
+		
+		textCyclistCountry = new JLabel();
+		textCyclistCountry.setText("Id of the Cyclist");
+		textCyclistCountry.setBounds(0, 100, 150, 30);
+		textCyclistCountry.setFont(new Font("Tahoma", Font.BOLD, 15));
+
+		fieldCyclistCountry = new JTextField();
+		fieldCyclistCountry.setBounds(180, 100, 50, 25);
+		fieldCyclistCountry.setFont(new Font("Tahoma", 0, 15));
+		fieldCyclistCountry.setBorder(null);
+
+		line6 = new JSeparator();
+		line6.setBounds(170, 130, 50, 20);
+		line6.setForeground(Color.black);
+		
 //
 		btnBack = new JButton("Back");
 		btnBack.setBounds(420, 380, 180, 30);
@@ -501,5 +555,86 @@ public class VentanaRegister extends JFrame {
 	public void setLine4(JSeparator line4) {
 		this.line4 = line4;
 	}
+
+	public JLabel getTextCyclistAccumTime() {
+		return textCyclistAccumTime;
+	}
+
+	public void setTextCyclistAccumTime(JLabel textCyclistAccumTime) {
+		this.textCyclistAccumTime = textCyclistAccumTime;
+	}
+
+	public JLabel getTextCyclistTeam() {
+		return textCyclistTeam;
+	}
+
+	public void setTextCyclistTeam(JLabel textCyclistTeam) {
+		this.textCyclistTeam = textCyclistTeam;
+	}
+
+	public JLabel getTextCyclistId() {
+		return textCyclistId;
+	}
+
+	public void setTextCyclistId(JLabel textCyclistId) {
+		this.textCyclistId = textCyclistId;
+	}
+
+	public JLabel getTextCyclistContexture() {
+		return textCyclistContexture;
+	}
+
+	public void setTextCyclistContexture(JLabel textCyclistContexture) {
+		this.textCyclistContexture = textCyclistContexture;
+	}
+
+	public JLabel getTextCyclistCountry() {
+		return textCyclistCountry;
+	}
+
+	public void setTextCyclistCountry(JLabel textCyclistCountry) {
+		this.textCyclistCountry = textCyclistCountry;
+	}
+
+	public JTextField getFieldCyclistAccumTime() {
+		return fieldCyclistAccumTime;
+	}
+
+	public void setFieldCyclistAccumTime(JTextField fieldCyclistAccumTime) {
+		this.fieldCyclistAccumTime = fieldCyclistAccumTime;
+	}
+
+	public JTextField getFieldCyclistTeam() {
+		return fieldCyclistTeam;
+	}
+
+	public void setFieldCyclistTeam(JTextField fieldCyclistTeam) {
+		this.fieldCyclistTeam = fieldCyclistTeam;
+	}
+
+	public JTextField getFieldCyclistId() {
+		return fieldCyclistId;
+	}
+
+	public void setFieldCyclistId(JTextField fieldCyclistId) {
+		this.fieldCyclistId = fieldCyclistId;
+	}
+
+	public JTextField getFieldCyclistContexture() {
+		return fieldCyclistContexture;
+	}
+
+	public void setFieldCyclistContexture(JTextField fieldCyclistContexture) {
+		this.fieldCyclistContexture = fieldCyclistContexture;
+	}
+
+	public JTextField getFieldCyclistCountry() {
+		return fieldCyclistCountry;
+	}
+
+	public void setFieldCyclistCountry(JTextField fieldCyclistCountry) {
+		this.fieldCyclistCountry = fieldCyclistCountry;
+	}
+	
 
 }
