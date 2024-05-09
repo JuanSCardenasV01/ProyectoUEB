@@ -39,6 +39,9 @@ public class VentanaRegister extends JFrame {
 	private JLabel textCyclistId;
 	private JLabel textCyclistContexture;
 	private JLabel textCyclistCountry;
+	private JLabel textAverageVelRodador;
+	private JLabel textAveragePedPowSprinter;
+	private JLabel textAveragevelocitySprinter;
 	private JLabel textDirector;
 	private JTextField fieldName;
 	private JTextField fieldUser;
@@ -47,6 +50,9 @@ public class VentanaRegister extends JFrame {
 	private JTextField fieldCyclistId;
 	private JTextField fieldCyclistContexture;
 	private JTextField fieldCyclistCountry;
+	private JTextField fieldAverageVelRodador;
+	private JTextField fieldAveragePedPowSprinter;
+	private JTextField fieldAveragevelocitySprinter;
 	private JPasswordField fieldPassword;
 	private JComboBox<String> comboBoxGender;
 	private JComboBox<String> comboBoxOcupation;
@@ -60,6 +66,9 @@ public class VentanaRegister extends JFrame {
 	private JSeparator line4;
 	private JSeparator line5;
 	private JSeparator line6;
+	private JSeparator line7;
+	private JSeparator line8;
+	private JSeparator line9;
 	private String[] gender = { "Male", "Femala", "not to say it", "Batman" };
 	private String[] ocupation = { "Massage", "Director", "Cyclicist", "Classical Cyclist", "Time Trialist", "Climber",
 			"Gregarius", "Rider", "Sprinter", };
@@ -256,6 +265,48 @@ public class VentanaRegister extends JFrame {
 		line6 = new JSeparator();
 		line6.setBounds(170, 130, 50, 20);
 		line6.setForeground(Color.black);
+		
+		textAverageVelRodador = new JLabel();
+		textAverageVelRodador.setText("Id of the Cyclist");
+		textAverageVelRodador.setBounds(0, 100, 150, 30);
+		textAverageVelRodador.setFont(new Font("Tahoma", Font.BOLD, 15));
+
+		fieldAverageVelRodador = new JTextField();
+		fieldAverageVelRodador.setBounds(180, 100, 50, 25);
+		fieldAverageVelRodador.setFont(new Font("Tahoma", 0, 15));
+		fieldAverageVelRodador.setBorder(null);
+
+		line7 = new JSeparator();
+		line7.setBounds(170, 130, 50, 20);
+		line7.setForeground(Color.black);
+		
+		textAveragePedPowSprinter = new JLabel();
+		textAveragePedPowSprinter.setText("Id of the Cyclist");
+		textAveragePedPowSprinter.setBounds(0, 100, 150, 30);
+		textAveragePedPowSprinter.setFont(new Font("Tahoma", Font.BOLD, 15));
+
+		fieldAveragePedPowSprinter = new JTextField();
+		fieldAveragePedPowSprinter.setBounds(180, 100, 50, 25);
+		fieldAveragePedPowSprinter.setFont(new Font("Tahoma", 0, 15));
+		fieldAveragePedPowSprinter.setBorder(null);
+
+		line8 = new JSeparator();
+		line8.setBounds(170, 130, 50, 20);
+		line8.setForeground(Color.black);
+		
+		textAveragevelocitySprinter = new JLabel();
+		textAveragevelocitySprinter.setText("Id of the Cyclist");
+		textAveragevelocitySprinter.setBounds(0, 100, 150, 30);
+		textAveragevelocitySprinter.setFont(new Font("Tahoma", Font.BOLD, 15));
+
+		fieldAveragevelocitySprinter = new JTextField();
+		fieldAveragevelocitySprinter.setBounds(180, 100, 50, 25);
+		fieldAveragevelocitySprinter.setFont(new Font("Tahoma", 0, 15));
+		fieldAveragevelocitySprinter.setBorder(null);
+
+		line9 = new JSeparator();
+		line9.setBounds(170, 130, 50, 20);
+		line9.setForeground(Color.black);
 		
 //
 		btnBack = new JButton("Back");
@@ -634,6 +685,54 @@ public class VentanaRegister extends JFrame {
 
 	public void setFieldCyclistCountry(JTextField fieldCyclistCountry) {
 		this.fieldCyclistCountry = fieldCyclistCountry;
+	}
+
+	public JLabel getTextAverageVelRodador() {
+		return textAverageVelRodador;
+	}
+
+	public void setTextAverageVelRodador(JLabel textAverageVelRodador) {
+		this.textAverageVelRodador = textAverageVelRodador;
+	}
+
+	public JTextField getFieldAverageVelRodador() {
+		return fieldAverageVelRodador;
+	}
+
+	public void setFieldAverageVelRodador(JTextField fieldAverageVelRodador) {
+		this.fieldAverageVelRodador = fieldAverageVelRodador;
+	}
+
+	public JLabel getTextAveragePedPowSprinter() {
+		return textAveragePedPowSprinter;
+	}
+
+	public void setTextAveragePedPowSprinter(JLabel textAveragePedPowSprinter) {
+		this.textAveragePedPowSprinter = textAveragePedPowSprinter;
+	}
+
+	public JLabel getTextAveragevelocitySprinter() {
+		return textAveragevelocitySprinter;
+	}
+
+	public void setTextAveragevelocitySprinter(JLabel textAveragevelocitySprinter) {
+		this.textAveragevelocitySprinter = textAveragevelocitySprinter;
+	}
+
+	public JTextField getFieldAveragePedPowSprinter() {
+		return fieldAveragePedPowSprinter;
+	}
+
+	public void setFieldAveragePedPowSprinter(JTextField fieldAveragePedPowSprinter) {
+		this.fieldAveragePedPowSprinter = fieldAveragePedPowSprinter;
+	}
+
+	public JTextField getFieldAveragevelocitySprinter() {
+		return fieldAveragevelocitySprinter;
+	}
+
+	public void setFieldAveragevelocitySprinter(JTextField fieldAveragevelocitySprinter) {
+		this.fieldAveragevelocitySprinter = fieldAveragevelocitySprinter;
 	}
 	
 
