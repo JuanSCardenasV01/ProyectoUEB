@@ -132,7 +132,7 @@ public class Controlador implements ActionListener {
 		case "comboBoxG": {
 			String selectedOcupation = (String) vF.getVenRe().getComboBoxOcupation().getSelectedItem();
 			switch (selectedOcupation) {
-			case "Masajista": {
+			case "Massage": {
 				vF.getVenRe().getPanelMasseur().setVisible(true);
 				vF.getVenRe().getPanelDirector().setVisible(false);
 				break;

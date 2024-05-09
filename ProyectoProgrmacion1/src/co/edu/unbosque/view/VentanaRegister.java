@@ -60,9 +60,9 @@ public class VentanaRegister extends JFrame {
 	private JSeparator line4;
 	private JSeparator line5;
 	private JSeparator line6;
-	private String[] gender = { "Masculino", "Femenino", "No decirlo", "Batman" };
-	private String[] ocupation = { "Masajista", "Director", "Ciclicista", "Clasicomano", "Contrarelojista", "Escalador",
-			"Gregario", "Rodador", "Sprinter", };
+	private String[] gender = { "Male", "Femala", "not to say it", "Batman" };
+	private String[] ocupation = { "Massage", "Director", "Cyclicist", "Classical Cyclist", "Time Trialist", "Climber",
+			"Gregarius", "Rider", "Sprinter", };
 
 	public VentanaRegister() {
 		setSize(800, 500);
