@@ -3,7 +3,6 @@ package co.edu.unbosque.model;
 public class CiclistaDTO extends UsuarioDTO {
 private int id;
 private int tiempoAcumulado;
-private String especialidad;
 private String contextura;
 private String equipo;
 private String pais;
@@ -14,7 +13,6 @@ public CiclistaDTO(int id, int tiempoAcumulado, String especialidad, String cont
 	super();
 	this.id = id;
 	this.tiempoAcumulado = tiempoAcumulado;
-	this.especialidad = especialidad;
 	this.contextura = contextura;
 	this.equipo = equipo;
 	this.pais = pais;
@@ -28,7 +26,6 @@ public CiclistaDTO(String genero, String correo, String contraseña, String nomb
 	super(genero, correo, contraseña, nombre);
 	this.id = id;
 	this.tiempoAcumulado = tiempoAcumulado;
-	this.especialidad = especialidad;
 	this.contextura = contextura;
 	this.equipo = equipo;
 	this.pais = pais;
@@ -44,12 +41,6 @@ public int getTiempoAcumulado() {
 }
 public void setTiempoAcumulado(int tiempoAcumulado) {
 	this.tiempoAcumulado = tiempoAcumulado;
-}
-public String getEspecialidad() {
-	return especialidad;
-}
-public void setEspecialidad(String especialidad) {
-	this.especialidad = especialidad;
 }
 public String getContextura() {
 	return contextura;
@@ -71,7 +62,7 @@ public void setPais(String pais) {
 }
 @Override
 public String toString() {
-	return "----Ciclista----- \nid: " + id + "\nTiempo Acumulado: " + tiempoAcumulado + "\nEspecialidad: " + especialidad
+	return "----Ciclista----- \nid: " + id + "\nTiempo Acumulado: " + tiempoAcumulado 
 			+ "\nContextura: " + contextura + "\nEquipo: " + equipo + "\nPais: " + pais;
 }
 

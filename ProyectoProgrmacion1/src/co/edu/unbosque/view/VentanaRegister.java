@@ -169,7 +169,41 @@ public class VentanaRegister extends JFrame {
 		line5 = new JSeparator();
 		line5.setBounds(100, 130, 150, 20);
 		line5.setForeground(Color.black);
+		//Cyclist panel
+		panelCyclist = new JPanel();
+		panelCyclist.setLayout(null);
+		panelCyclist.setBounds(400, 50, 350, 300);
+		panelCyclist.setBackground(new Color(255, 255, 255));
+		panelCyclist.setVisible(false);
 
+		textCyclistId = new JLabel();
+		textCyclistId.setText("Id of the Cyclist");
+		textCyclistId.setBounds(0, 100, 150, 30);
+		textCyclistId.setFont(new Font("Tahoma", Font.BOLD, 15));
+
+		fieldCyclistId = new JTextField();
+		fieldCyclistId.setBounds(180, 100, 50, 25);
+		fieldCyclistId.setFont(new Font("Tahoma", 0, 15));
+		fieldCyclistId.setBorder(null);
+
+		line6 = new JSeparator();
+		line6.setBounds(170, 130, 50, 20);
+		line6.setForeground(Color.black);
+		
+		textCyclistAccumTime = new JLabel();
+		textCyclistAccumTime.setText("Cyclist Accumulated Time");
+		textCyclistAccumTime.setBounds(0, 100, 150, 30);
+		textCyclistAccumTime.setFont(new Font("Tahoma", Font.BOLD, 15));
+
+		fieldCyclistAccumTime = new JTextField();
+		fieldCyclistAccumTime.setBounds(180, 100, 50, 25);
+		fieldCyclistAccumTime.setFont(new Font("Tahoma", 0, 15));
+		fieldCyclistAccumTime.setBorder(null);
+
+		line4 = new JSeparator();
+		line4.setBounds(170, 130, 50, 20);
+		line4.setForeground(Color.black);
+//
 		btnBack = new JButton("Back");
 		btnBack.setBounds(420, 380, 180, 30);
 		btnBack.setBackground(new Color(133, 153, 30));
