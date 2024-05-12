@@ -42,6 +42,11 @@ public class VentanaRegister extends JFrame {
 	private JLabel textAverageVelRodador;
 	private JLabel textAveragePedPowSprinter;
 	private JLabel textAveragevelocitySprinter;
+	private JLabel textPelotonFunctionGregario;
+	private JLabel textAverageAccelEscalador;
+	private JLabel textmaxRampDegreeEscalator;
+	private JLabel textmaxVelContrarrelojista;
+	private JLabel textAveragePedalSpeedClasico;
 	private JLabel textDirector;
 	private JTextField fieldName;
 	private JTextField fieldUser;
@@ -53,6 +58,11 @@ public class VentanaRegister extends JFrame {
 	private JTextField fieldAverageVelRodador;
 	private JTextField fieldAveragePedPowSprinter;
 	private JTextField fieldAveragevelocitySprinter;
+	private JTextField fieldPelotonFunctionGregario;
+	private JTextField fieldAverageAccelEscalador;
+	private JTextField fieldmaxRampDegreeEscalator;
+	private JTextField fieldmaxVelContrarrelojista;
+	private JTextField fieldAveragePedalSpeedClasico;
 	private JPasswordField fieldPassword;
 	private JComboBox<String> comboBoxGender;
 	private JComboBox<String> comboBoxOcupation;
@@ -69,6 +79,11 @@ public class VentanaRegister extends JFrame {
 	private JSeparator line7;
 	private JSeparator line8;
 	private JSeparator line9;
+	private JSeparator line10;
+	private JSeparator line11;
+	private JSeparator line12;
+	private JSeparator line13;
+	private JSeparator line14;
 	private String[] gender = { "Male", "Femala", "not to say it", "Batman" };
 	private String[] ocupation = { "Massage", "Director", "Cyclicist", "Classical Cyclist", "Time Trialist", "Climber",
 			"Gregarius", "Rider", "Sprinter", };
@@ -308,6 +323,75 @@ public class VentanaRegister extends JFrame {
 		line9.setBounds(170, 130, 50, 20);
 		line9.setForeground(Color.black);
 		
+		textPelotonFunctionGregario = new JLabel();
+		textPelotonFunctionGregario.setText("Id of the Cyclist");
+		textPelotonFunctionGregario.setBounds(0, 100, 150, 30);
+		textPelotonFunctionGregario.setFont(new Font("Tahoma", Font.BOLD, 15));
+
+		fieldPelotonFunctionGregario = new JTextField();
+		fieldPelotonFunctionGregario.setBounds(180, 100, 50, 25);
+		fieldPelotonFunctionGregario.setFont(new Font("Tahoma", 0, 15));
+		fieldPelotonFunctionGregario.setBorder(null);
+
+		line10 = new JSeparator();
+		line10.setBounds(170, 130, 50, 20);
+		line10.setForeground(Color.black);
+		
+		textAverageAccelEscalador = new JLabel();
+		textAverageAccelEscalador.setText("Id of the Cyclist");
+		textAverageAccelEscalador.setBounds(0, 100, 150, 30);
+		textAverageAccelEscalador.setFont(new Font("Tahoma", Font.BOLD, 15));
+
+		fieldAverageAccelEscalador = new JTextField();
+		fieldAverageAccelEscalador.setBounds(180, 100, 50, 25);
+		fieldAverageAccelEscalador.setFont(new Font("Tahoma", 0, 15));
+		fieldAverageAccelEscalador.setBorder(null);
+
+		line11 = new JSeparator();
+		line11.setBounds(170, 130, 50, 20);
+		line11.setForeground(Color.black);
+		
+		textmaxRampDegreeEscalator = new JLabel();
+		textmaxRampDegreeEscalator.setText("Id of the Cyclist");
+		textmaxRampDegreeEscalator.setBounds(0, 100, 150, 30);
+		textmaxRampDegreeEscalator.setFont(new Font("Tahoma", Font.BOLD, 15));
+
+		fieldmaxRampDegreeEscalator = new JTextField();
+		fieldmaxRampDegreeEscalator.setBounds(180, 100, 50, 25);
+		fieldmaxRampDegreeEscalator.setFont(new Font("Tahoma", 0, 15));
+		fieldmaxRampDegreeEscalator.setBorder(null);
+
+		line12 = new JSeparator();
+		line12.setBounds(170, 130, 50, 20);
+		line12.setForeground(Color.black);
+		
+		textmaxVelContrarrelojista = new JLabel();
+		textmaxVelContrarrelojista.setText("Id of the Cyclist");
+		textmaxVelContrarrelojista.setBounds(0, 100, 150, 30);
+		textmaxVelContrarrelojista.setFont(new Font("Tahoma", Font.BOLD, 15));
+
+		fieldmaxVelContrarrelojista = new JTextField();
+		fieldmaxVelContrarrelojista.setBounds(180, 100, 50, 25);
+		fieldmaxVelContrarrelojista.setFont(new Font("Tahoma", 0, 15));
+		fieldmaxVelContrarrelojista.setBorder(null);
+
+		line13 = new JSeparator();
+		line13.setBounds(170, 130, 50, 20);
+		line13.setForeground(Color.black);
+		
+		textAveragePedalSpeedClasico = new JLabel();
+		textAveragePedalSpeedClasico.setText("Id of the Cyclist");
+		textAveragePedalSpeedClasico.setBounds(0, 100, 150, 30);
+		textAveragePedalSpeedClasico.setFont(new Font("Tahoma", Font.BOLD, 15));
+
+		fieldAveragePedalSpeedClasico = new JTextField();
+		fieldAveragePedalSpeedClasico.setBounds(180, 100, 50, 25);
+		fieldAveragePedalSpeedClasico.setFont(new Font("Tahoma", 0, 15));
+		fieldAveragePedalSpeedClasico.setBorder(null);
+
+		line14 = new JSeparator();
+		line14.setBounds(170, 130, 50, 20);
+		line14.setForeground(Color.black);
 //
 		btnBack = new JButton("Back");
 		btnBack.setBounds(420, 380, 180, 30);
@@ -733,6 +817,86 @@ public class VentanaRegister extends JFrame {
 
 	public void setFieldAveragevelocitySprinter(JTextField fieldAveragevelocitySprinter) {
 		this.fieldAveragevelocitySprinter = fieldAveragevelocitySprinter;
+	}
+
+	public JLabel getTextPelotonFunctionGregario() {
+		return textPelotonFunctionGregario;
+	}
+
+	public void setTextPelotonFunctionGregario(JLabel textPelotonFunctionGregario) {
+		this.textPelotonFunctionGregario = textPelotonFunctionGregario;
+	}
+
+	public JTextField getFieldPelotonFunctionGregario() {
+		return fieldPelotonFunctionGregario;
+	}
+
+	public void setFieldPelotonFunctionGregario(JTextField fieldPelotonFunctionGregario) {
+		this.fieldPelotonFunctionGregario = fieldPelotonFunctionGregario;
+	}
+
+	public JLabel getTextAverageAccelEscalador() {
+		return textAverageAccelEscalador;
+	}
+
+	public void setTextAverageAccelEscalador(JLabel textAverageAccelEscalador) {
+		this.textAverageAccelEscalador = textAverageAccelEscalador;
+	}
+
+	public JLabel getTextmaxRampDegreeEscalator() {
+		return textmaxRampDegreeEscalator;
+	}
+
+	public void setTextmaxRampDegreeEscalator(JLabel textmaxRampDegreeEscalator) {
+		this.textmaxRampDegreeEscalator = textmaxRampDegreeEscalator;
+	}
+
+	public JLabel getTextmaxVelContrarrelojista() {
+		return textmaxVelContrarrelojista;
+	}
+
+	public void setTextmaxVelContrarrelojista(JLabel textmaxVelContrarrelojista) {
+		this.textmaxVelContrarrelojista = textmaxVelContrarrelojista;
+	}
+
+	public JLabel getTextAveragePedalSpeedClasico() {
+		return textAveragePedalSpeedClasico;
+	}
+
+	public void setTextAveragePedalSpeedClasico(JLabel textAveragePedalSpeedClasico) {
+		this.textAveragePedalSpeedClasico = textAveragePedalSpeedClasico;
+	}
+
+	public JTextField getFieldAverageAccelEscalador() {
+		return fieldAverageAccelEscalador;
+	}
+
+	public void setFieldAverageAccelEscalador(JTextField fieldAverageAccelEscalador) {
+		this.fieldAverageAccelEscalador = fieldAverageAccelEscalador;
+	}
+
+	public JTextField getFieldmaxRampDegreeEscalator() {
+		return fieldmaxRampDegreeEscalator;
+	}
+
+	public void setFieldmaxRampDegreeEscalator(JTextField fieldmaxRampDegreeEscalator) {
+		this.fieldmaxRampDegreeEscalator = fieldmaxRampDegreeEscalator;
+	}
+
+	public JTextField getFieldmaxVelContrarrelojista() {
+		return fieldmaxVelContrarrelojista;
+	}
+
+	public void setFieldmaxVelContrarrelojista(JTextField fieldmaxVelContrarrelojista) {
+		this.fieldmaxVelContrarrelojista = fieldmaxVelContrarrelojista;
+	}
+
+	public JTextField getFieldAveragePedalSpeedClasico() {
+		return fieldAveragePedalSpeedClasico;
+	}
+
+	public void setFieldAveragePedalSpeedClasico(JTextField fieldAveragePedalSpeedClasico) {
+		this.fieldAveragePedalSpeedClasico = fieldAveragePedalSpeedClasico;
 	}
 	
 
