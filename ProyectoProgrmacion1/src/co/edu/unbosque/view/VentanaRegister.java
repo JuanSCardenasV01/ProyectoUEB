@@ -214,8 +214,8 @@ public class VentanaRegister extends JFrame {
 		
 		panelCyclist = new JPanel();
 		panelCyclist.setLayout(null);
-		panelCyclist.setBounds(400, 50, 350, 300);
-		panelCyclist.setBackground(new Color(255, 255, 255));
+		panelCyclist.setBounds(400, 50, 350, 250);
+		panelCyclist.setBackground(Color.white);
 		panelCyclist.setVisible(false);
 
 		textCyclistId = new JLabel();
@@ -364,36 +364,36 @@ public class VentanaRegister extends JFrame {
 		
 		panelClimber = new JPanel();
 		panelClimber.setLayout(null);
-		panelClimber.setBounds(400, 50, 350, 300);
-		panelClimber.setBackground(new Color(255, 255, 255));
+		panelClimber.setBounds(400, 300, 350, 200);
+		panelClimber.setBackground(Color.white);
 		panelClimber.setVisible(false);
 		
 		textAverageAccelEscalador = new JLabel();
 		textAverageAccelEscalador.setText("Average Acceleration");
-		textAverageAccelEscalador.setBounds(0, 220, 150, 30);
+		textAverageAccelEscalador.setBounds(0, 0, 150, 30);
 		textAverageAccelEscalador.setFont(new Font("Tahoma", Font.BOLD, 15));
 
 		fieldAverageAccelEscalador = new JTextField();
-		fieldAverageAccelEscalador.setBounds(180, 220, 50, 25);
+		fieldAverageAccelEscalador.setBounds(180, 0, 50, 25);
 		fieldAverageAccelEscalador.setFont(new Font("Tahoma", 0, 15));
 		fieldAverageAccelEscalador.setBorder(null);
 
 		line15 = new JSeparator();
-		line15.setBounds(170, 130, 50, 20);
+		line15.setBounds(170, 50, 50, 20);
 		line15.setForeground(Color.black);
 		
 		textmaxRampDegreeEscalator = new JLabel();
 		textmaxRampDegreeEscalator.setText("Max ramp Degree");
-		textmaxRampDegreeEscalator.setBounds(0, 240, 150, 30);
+		textmaxRampDegreeEscalator.setBounds(0, 30, 150, 30);
 		textmaxRampDegreeEscalator.setFont(new Font("Tahoma", Font.BOLD, 15));
 
 		fieldmaxRampDegreeEscalator = new JTextField();
-		fieldmaxRampDegreeEscalator.setBounds(180, 240, 50, 25);
+		fieldmaxRampDegreeEscalator.setBounds(180, 30, 50, 25);
 		fieldmaxRampDegreeEscalator.setFont(new Font("Tahoma", 0, 15));
 		fieldmaxRampDegreeEscalator.setBorder(null);
 
 		line16 = new JSeparator();
-		line16.setBounds(170, 130, 50, 20);
+		line16.setBounds(170, 60, 50, 20);
 		line16.setForeground(Color.black);
 		
 		panelCounterCyclist = new JPanel();
