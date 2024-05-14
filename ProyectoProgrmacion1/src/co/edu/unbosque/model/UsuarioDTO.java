@@ -1,15 +1,18 @@
 package co.edu.unbosque.model;
 import java.io.Serializable;
+
+//La clase UsuarioDTO representa a un usuario en el sistema. 
+//Implementa la interfaz Serializable, la cual permite que los objetos de esta clase se conviertan a un flujo de bytes (serialización) 
+//y se vuelvan a crear a partir de ese flujo (deserialización).
 public class UsuarioDTO implements Serializable{
-	/**
-	 * 
-	 */
+
 	private static final long serialVersionUID = 1L;
 	private String genero;
 	private String correo;
 	private String contraseña;
 	private String nombre;
 
+	//constructores
 	public UsuarioDTO() {
 		// TODO Auto-generated constructor stub
 	}
@@ -22,6 +25,8 @@ public class UsuarioDTO implements Serializable{
 		this.nombre = nombre;
 	}
 
+	//getters y stters
+	
 	public String getGenero() {
 		return genero;
 	}

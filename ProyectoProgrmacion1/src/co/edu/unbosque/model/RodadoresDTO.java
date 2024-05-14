@@ -1,8 +1,12 @@
 package co.edu.unbosque.model;
 
+
+//La clase RodadoresDTO representa a un ciclista "Rodador" 
+//en el sistema. Extiende la clase CiclistaDTO, lo que significa que hereda
+//todos los atributos y métodos de la clase CiclistaDTO.
 public class RodadoresDTO extends CiclistaDTO {
 private float velocidadPromedioPendiente;
-
+// constructores
 public RodadoresDTO() {
 	// TODO Auto-generated constructor stub
 }
@@ -38,6 +42,8 @@ public float getVelocidadPromedioPendiente() {
 	return velocidadPromedioPendiente;
 }
 
+
+//getters y setter
 public void setVelocidadPromedioPendiente(float velocidadPromedioPendiente) {
 	this.velocidadPromedioPendiente = velocidadPromedioPendiente;
 }

@@ -1,11 +1,15 @@
 package co.edu.unbosque.model;
 
+//La clase CiclistaDTO representa a un ciclista en el sistema.
+//Extiende la clase UsuarioDTO
 public class CiclistaDTO extends UsuarioDTO {
 private int id;
 private int tiempoAcumulado;
 private String contextura;
 private String equipo;
 private String pais;
+
+//constructores
 public CiclistaDTO() {
 	// TODO Auto-generated constructor stub
 }
@@ -30,6 +34,7 @@ public CiclistaDTO(String genero, String correo, String contraseña, String nomb
 	this.equipo = equipo;
 	this.pais = pais;
 }
+// getters & setters
 public int getId() {
 	return id;
 }

@@ -1,10 +1,14 @@
 package co.edu.unbosque.model;
 
+
+//La clase EscaladorDTO representa a un ciclista "Escalador" en
+//el sistema. Extiende la clase CiclistaDTO, lo que significa que hereda
+//todos los atributos y métodos de la clase CiclistaDTO.
 public class EscaladorDTO extends CiclistaDTO {
 private float aceleracionPromedio;
 private float gradoRamapaMax;
 
-
+//constructores
 public EscaladorDTO() {
 	// TODO Auto-generated constructor stub
 }
@@ -39,6 +43,7 @@ public EscaladorDTO(String genero, String correo, String contraseña, String nom
 	// TODO Auto-generated constructor stub
 }
 
+//getters y stters
 public float getAceleracionPromedio() {
 	return aceleracionPromedio;
 }

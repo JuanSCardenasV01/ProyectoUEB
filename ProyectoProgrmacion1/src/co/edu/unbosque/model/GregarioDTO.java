@@ -1,9 +1,12 @@
 package co.edu.unbosque.model;
 
+//La clase GregarioDTO representa a un ciclista "Gregario"
+//en el sistema. Extiende la clase CiclistaDTO, lo que significa que hereda
+//todos los atributos y métodos de la clase CiclistaDTO.
 public class GregarioDTO extends CiclistaDTO {
 private String funcionPeloton;
 
-
+//constructores
 public GregarioDTO() {
 	// TODO Auto-generated constructor stub
 }
@@ -50,7 +53,7 @@ public void setFuncionPeloton(String funcionPeloton) {
 	this.funcionPeloton = funcionPeloton;
 }
 
-
+//to string
 @Override
 public String toString() {
 	return super.toString() + "Funcion Peloton:" + funcionPeloton;

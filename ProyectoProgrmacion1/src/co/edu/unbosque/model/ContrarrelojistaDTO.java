@@ -1,9 +1,11 @@
 package co.edu.unbosque.model;
-
+//La clase ContrarrelojistaDTO representa a un ciclista "Contrarrelojista" en el sistema.
+//Extiende la clase CiclistaDTO, lo que significa que hereda
+//todos los atributos y métodos de la clase CiclistaDTO.
 public class ContrarrelojistaDTO extends CiclistaDTO{
 private float velMaxima;
 
-
+//constructores
 public ContrarrelojistaDTO() {
 	// TODO Auto-generated constructor stub
 }
@@ -41,7 +43,7 @@ public ContrarrelojistaDTO(String genero, String correo, String contraseña, Str
 	// TODO Auto-generated constructor stub
 }
 
-
+//getters & setters
 public float getVelMaxima() {
 	return velMaxima;
 }
@@ -51,7 +53,7 @@ public void setVelMaxima(float velMaxima) {
 	this.velMaxima = velMaxima;
 }
 
-
+//to string
 @Override
 public String toString() {
 	return super.toString() + "ContrarrelojistaDTO [velMaxima=" + velMaxima + "]";

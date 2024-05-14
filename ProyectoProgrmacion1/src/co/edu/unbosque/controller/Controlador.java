@@ -16,6 +16,10 @@ import co.edu.unbosque.view.ViewFacade;
 
 public class Controlador implements ActionListener {
 
+//	Constructor de la clase Controlador.
+//	Inicializa las instancias de ViewFacade y ModelFacade,
+//    y asigna los ActionListeners a los botones y combobox.
+
 	private ViewFacade vF;
 	private ModelFacade mF;
 
@@ -26,11 +30,14 @@ public class Controlador implements ActionListener {
 
 	}
 
+	// Método que hace visible la ventana de registro inicialmente.
 	public void run() {
 		vF.getVenRe().setVisible(true);
 
 	}
 
+	// Método que asigna ActionListeners a los botones y combobox para escuchar
+	// eventos.
 	private void asignarLectores() {
 		vF.getVenLog().getBtnLogin().addActionListener(this);
 		vF.getVenLog().getBtnLogin().setActionCommand("btnLogin");
@@ -55,10 +62,12 @@ public class Controlador implements ActionListener {
 
 	}
 
+	// Método que maneja los eventos de los botones y combobox.
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		switch (e.getActionCommand()) {
-
+//		Maneja el clic en el botón "Iniciar sesión" en la ventana de inicio de sesión.
+//		Valida las credenciales del usuario y muestra el panel correspondiente (administrador o usuario).
 		case "btnLogin": {
 			vF.getVenLog().setVisible(false);
 			String user = vF.getVenLog().getFieldUser().getText();
@@ -78,16 +87,24 @@ public class Controlador implements ActionListener {
 			}
 			break;
 		}
+		
+//		Maneja el clic en el botón "Registrarse" en la ventana de inicio de sesión.
+//		Oculta la ventana de inicio de sesión y muestra la ventana de registro.
 		case "btnVRegister": {
 			vF.getVenLog().setVisible(false);
 			vF.getVenRe().setVisible(true);
 			break;
 		}
+//		Maneja el clic en el botón "Atrás" en la ventana de registro.
+//		Oculta la ventana de registro y muestra la ventana de inicio de sesión.
 		case "btnBack": {
 			vF.getVenRe().setVisible(false);
 			vF.getVenLog().setVisible(true);
 			break;
 		}
+		
+//		Maneja el clic en el botón "Cerrar sesión" en el panel del administrador.
+//		Oculta el panel del administrador y muestra la ventana de inicio de sesión.
 		case "btnLogout": {
 			vF.getVenPA().setVisible(false);
 			vF.getVenLog().setVisible(true);
@@ -129,7 +146,8 @@ public class Controlador implements ActionListener {
 			vF.getVenPA().getPanel4().setVisible(true);
 			break;
 		}
-
+//		Maneja el cambio de selección en el combobox de ocupación en la ventana de registro.
+//		Muestra el panel correspondiente (masajista o director) según la ocupación seleccionada.
 		case "comboBoxG": {
 			String selectedOcupation = (String) vF.getVenRe().getComboBoxOcupation().getSelectedItem();
 			switch (selectedOcupation) {
@@ -147,13 +165,16 @@ public class Controlador implements ActionListener {
 
 			break;
 		}
-
+//		Maneja el clic en el botón "Registrarse" en la ventana de registro.
+//		Crea nuevos objetos UsuarioDTO y DirectorDTO basados en la información ingresada.
+//		Guarda el nuevo usuario y director en la base de datos.
+//		Muestra un mensaje de éxito.
 		case "btnRegister": {
 			String nombre = vF.getVenRe().getFieldName().getText();
 			String correo = vF.getVenRe().getFieldUser().getText();
 			String contraseña = vF.getVenRe().getFieldPassword().getText();
 			String genero = (String) vF.getVenRe().getComboBox().getSelectedItem();
-			String nacionalidad =vF.getVenRe().getFieldDirector().getText();
+			String nacionalidad = vF.getVenRe().getFieldDirector().getText();
 			mF.getUsuarioDAO().create(new UsuarioDTO(genero, correo, contraseña, nombre));
 			mF.getDirectorDAO().create(new DirectorDTO(genero, correo, contraseña, nombre, nacionalidad));
 			JOptionPane.showMessageDialog(null, null, "Usuario Creado", JOptionPane.INFORMATION_MESSAGE);

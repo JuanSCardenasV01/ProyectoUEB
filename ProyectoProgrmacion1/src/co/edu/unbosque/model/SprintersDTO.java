@@ -1,9 +1,15 @@
 package co.edu.unbosque.model;
 
-public class SprintersDTO extends CiclistaDTO {
+
+//La clase SprintersDTO representa a un ciclista "Sprinter"
+//en el sistema. Extiende la clase CiclistaDTO, lo que significa que hereda
+//todos los atributos y métodos de la clase CiclistaDTO
+class SprintersDTO extends CiclistaDTO {
 private float potenciaPromPedaleo;
 private float velocidadPromSprint;
 
+
+// constructores
 public SprintersDTO() {
 	// TODO Auto-generated constructor stub
 }
@@ -38,6 +44,8 @@ public SprintersDTO(String genero, String correo, String contraseña, String nom
 	// TODO Auto-generated constructor stub
 }
 
+
+// gettersd y stteres
 public float getPotenciaPromPedaleo() {
 	return potenciaPromPedaleo;
 }
