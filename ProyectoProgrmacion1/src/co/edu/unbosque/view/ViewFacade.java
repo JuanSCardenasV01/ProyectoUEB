@@ -4,10 +4,12 @@ public class ViewFacade {
 	private VentanaLogin venLog;
 	private VentanaPrincipalAdmin venPA;
 	private VentanaRegister venRe;
+	private VentanaUsuario venUsu;
 	public ViewFacade() {
 		venLog = new VentanaLogin();
 		venPA = new VentanaPrincipalAdmin();
 		venRe = new VentanaRegister();
+		venUsu = new VentanaUsuario();
 	}
 
 	public VentanaLogin getVenLog() {
@@ -33,6 +35,16 @@ public class ViewFacade {
 	public void setVenRe(VentanaRegister venRe) {
 		this.venRe = venRe;
 	}
+
+	public VentanaUsuario getVenUsu() {
+		return venUsu;
+	}
+
+	public void setVenUsu(VentanaUsuario venUsu) {
+		this.venUsu = venUsu;
+	}
+	
+	
 	
 	
 	

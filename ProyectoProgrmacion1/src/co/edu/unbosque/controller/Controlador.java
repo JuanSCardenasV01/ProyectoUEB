@@ -9,6 +9,7 @@ import javax.swing.JOptionPane;
 
 import org.w3c.dom.UserDataHandler;
 
+import co.edu.unbosque.model.DirectorDTO;
 import co.edu.unbosque.model.ModelFacade;
 import co.edu.unbosque.model.UsuarioDTO;
 import co.edu.unbosque.view.ViewFacade;
@@ -68,7 +69,7 @@ public class Controlador implements ActionListener {
 				if (user.equals("admin") && password.equals("123")) {
 					vF.getVenPA().setVisible(true); // Mostrar panel de administrador
 				} else {
-					JOptionPane.showMessageDialog(null, null, "Panel en Proceso", JOptionPane.INFORMATION_MESSAGE);
+					vF.getVenUsu().setVisible(true);
 				}
 			} else {
 				JOptionPane.showMessageDialog(null, "Usuario o contraseña incorrectos", "Error de inicio de sesión",
@@ -152,7 +153,9 @@ public class Controlador implements ActionListener {
 			String correo = vF.getVenRe().getFieldUser().getText();
 			String contraseña = vF.getVenRe().getFieldPassword().getText();
 			String genero = (String) vF.getVenRe().getComboBox().getSelectedItem();
+			String nacionalidad =vF.getVenRe().getFieldDirector().getText();
 			mF.getUsuarioDAO().create(new UsuarioDTO(genero, correo, contraseña, nombre));
+			mF.getDirectorDAO().create(new DirectorDTO(genero, correo, contraseña, nombre, nacionalidad));
 			JOptionPane.showMessageDialog(null, null, "Usuario Creado", JOptionPane.INFORMATION_MESSAGE);
 
 		}

@@ -12,7 +12,6 @@ public class DirectorDAO implements CRUDOperation <DirectorDTO>{
 	public DirectorDAO() {
 		// TODO Auto-generated constructor stub
 		list = new ArrayList<>();
-		leerArchivo();
 		leerDesdeArchivoSerializado();
 		escribirArchivo();
 	}

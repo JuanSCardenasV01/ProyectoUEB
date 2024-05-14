@@ -898,6 +898,102 @@ public class VentanaRegister extends JFrame {
 	public void setFieldAveragePedalSpeedClasico(JTextField fieldAveragePedalSpeedClasico) {
 		this.fieldAveragePedalSpeedClasico = fieldAveragePedalSpeedClasico;
 	}
+
+	public JLabel getTextDirector() {
+		return textDirector;
+	}
+
+	public void setTextDirector(JLabel textDirector) {
+		this.textDirector = textDirector;
+	}
+
+	public JTextField getFieldDirector() {
+		return fieldDirector;
+	}
+
+	public void setFieldDirector(JTextField fieldDirector) {
+		this.fieldDirector = fieldDirector;
+	}
+
+	public JSeparator getLine5() {
+		return line5;
+	}
+
+	public void setLine5(JSeparator line5) {
+		this.line5 = line5;
+	}
+
+	public JSeparator getLine6() {
+		return line6;
+	}
+
+	public void setLine6(JSeparator line6) {
+		this.line6 = line6;
+	}
+
+	public JSeparator getLine7() {
+		return line7;
+	}
+
+	public void setLine7(JSeparator line7) {
+		this.line7 = line7;
+	}
+
+	public JSeparator getLine8() {
+		return line8;
+	}
+
+	public void setLine8(JSeparator line8) {
+		this.line8 = line8;
+	}
+
+	public JSeparator getLine9() {
+		return line9;
+	}
+
+	public void setLine9(JSeparator line9) {
+		this.line9 = line9;
+	}
+
+	public JSeparator getLine10() {
+		return line10;
+	}
+
+	public void setLine10(JSeparator line10) {
+		this.line10 = line10;
+	}
+
+	public JSeparator getLine11() {
+		return line11;
+	}
+
+	public void setLine11(JSeparator line11) {
+		this.line11 = line11;
+	}
+
+	public JSeparator getLine12() {
+		return line12;
+	}
+
+	public void setLine12(JSeparator line12) {
+		this.line12 = line12;
+	}
+
+	public JSeparator getLine13() {
+		return line13;
+	}
+
+	public void setLine13(JSeparator line13) {
+		this.line13 = line13;
+	}
+
+	public JSeparator getLine14() {
+		return line14;
+	}
+
+	public void setLine14(JSeparator line14) {
+		this.line14 = line14;
+	}
 	
 
 }
