@@ -168,7 +168,22 @@ public class Controlador implements ActionListener {
 				vF.getVenRe().getPanelMasseur().setVisible(false);
 				vF.getVenRe().getPanelDirector().setVisible(false);
 				vF.getVenRe().getPanelCyclist().setVisible(true);
+				vF.getVenRe().getPanelClassicalCyclist().setVisible(false);
+				vF.getVenRe().getPanelCounterCyclist().setVisible(false);
+				vF.getVenRe().getPanelClassicalCyclist().setVisible(false);
 				break;
+			}
+			case"Time Trialist":{
+				vF.getVenRe().getPanelMasseur().setVisible(false);
+				vF.getVenRe().getPanelDirector().setVisible(false);
+				vF.getVenRe().getPanelCyclist().setVisible(true);
+				vF.getVenRe().getPanelCounterCyclist().setVisible(true);
+			}
+			case "Climber":{
+				vF.getVenRe().getPanelMasseur().setVisible(false);
+				vF.getVenRe().getPanelDirector().setVisible(false);
+				vF.getVenRe().getPanelCyclist().setVisible(true);
+				vF.getVenRe().getPanelClimber().setVisible(true);
 			}
 			}
 
