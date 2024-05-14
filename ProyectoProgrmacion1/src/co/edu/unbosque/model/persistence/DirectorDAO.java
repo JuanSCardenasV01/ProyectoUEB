@@ -18,9 +18,9 @@ public class DirectorDAO implements CRUDOperation <DirectorDTO>{
 	public void escribirArchivo() {
 		StringBuilder sbBuilder = new StringBuilder();
 		for (int i = 0; i < list.size(); i++) {
-			sbBuilder.append(list.get(i).getGenero());
-			sbBuilder.append(list.get(i).getCorreo());
-			sbBuilder.append(list.get(i).getContraseña());
+			sbBuilder.append(list.get(i).getGenero()).append(";");
+			sbBuilder.append(list.get(i).getCorreo()).append(";");
+			sbBuilder.append(list.get(i).getContraseña()).append(";");
 			sbBuilder.append(list.get(i).getNombre()).append(";");
 			sbBuilder.append(list.get(i).getNacionalidad());
 			if (i < list.size() - 1) {

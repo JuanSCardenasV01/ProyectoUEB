@@ -3,6 +3,7 @@ package co.edu.unbosque.view;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Image;
+import java.io.ObjectStreamField;
 
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
@@ -11,9 +12,10 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JSeparator;
+import javax.swing.SwingConstants;
 
 public class VentanaUsuario extends JFrame{
-	private JPanel panelAdmin;
+	private JPanel panelUser;
 	private JPanel panelSidebar;
 	private JPanel panel1;
 	private JPanel panel2;
@@ -26,6 +28,7 @@ public class VentanaUsuario extends JFrame{
 	private JButton btn2;
 	private JButton btn3;
 	private JButton btn4;
+	private JButton btn5;
 	private JSeparator line1;
 
 	public VentanaUsuario() {
@@ -41,10 +44,10 @@ public class VentanaUsuario extends JFrame{
 				img.getImage().getScaledInstance(logo.getWidth(), logo.getHeight(), Image.SCALE_DEFAULT));
 		logo.setIcon(icon);
 
-		panelAdmin = new JPanel();
-		panelAdmin.setLayout(null);
-		panelAdmin.setBounds(0, 0, 800, 500);
-		panelAdmin.setBackground(new Color(255, 255, 255));
+		panelUser = new JPanel();
+		panelUser.setLayout(null);
+		panelUser.setBounds(0, 0, 800, 500);
+		panelUser.setBackground(new Color(255, 255, 255));
 
 		panelSidebar = new JPanel();
 		panelSidebar.setLayout(null);
@@ -77,9 +80,10 @@ public class VentanaUsuario extends JFrame{
 		panel4.setVisible(false);
 
 		textAdmin = new JLabel();
-		textAdmin.setText("User");
-		textAdmin.setBounds(25, 100, 110, 50);
+		textAdmin.setText("");
+		textAdmin.setBounds(25, 100, 150, 50);
 		textAdmin.setForeground(Color.WHITE);
+		textAdmin.setHorizontalAlignment(SwingConstants.CENTER);
 		textAdmin.setFont(new Font("Tahoma", Font.BOLD, 15));
 
 		line1 = new JSeparator();
@@ -94,36 +98,43 @@ public class VentanaUsuario extends JFrame{
 		btnLogout.setBorderPainted(false);
 
 		
-		btn1 = new JButton("xxx");
+		btn1 = new JButton("CREATE YOUR TEAM");
 		btn1.setBounds(0, 175, 150, 30);
 		btn1.setBackground(new Color(12, 116, 127));
 		btn1.setForeground(new Color(255, 255, 255));
 		btn1.setFont(new Font("Tahoma", Font.BOLD, 25));
 		btn1.setBorderPainted(false);
 		
-		btn2 = new JButton("xxx");
+		btn2 = new JButton("OTHER TEAMS");
 		btn2.setBounds(0, 225, 150, 30);
 		btn2.setBackground(new Color(12, 116, 127));
 		btn2.setForeground(new Color(255, 255, 255));
 		btn2.setFont(new Font("Tahoma", Font.BOLD, 25));
 		btn2.setBorderPainted(false);
 		
-		btn3 = new JButton("xxx");
+		btn3 = new JButton("UPDATE YOUR PROFILE");
 		btn3.setBounds(0, 275, 150, 30);
 		btn3.setBackground(new Color(12, 116, 127));
 		btn3.setForeground(new Color(255, 255, 255));
 		btn3.setFont(new Font("Tahoma", Font.BOLD, 25));
 		btn3.setBorderPainted(false);
 		
-		btn4 = new JButton("xxx");
+		btn4 = new JButton("VIEW RACES");
 		btn4.setBounds(0, 325, 150, 30);
 		btn4.setBackground(new Color(12, 116, 127));
 		btn4.setForeground(new Color(255, 255, 255));
 		btn4.setFont(new Font("Tahoma", Font.BOLD, 25));
 		btn4.setBorderPainted(false);
+		
+		btn5 = new JButton("RESULTS");
+		btn5.setBounds(0, 325, 150, 30);
+		btn5.setBackground(new Color(12, 116, 127));
+		btn5.setForeground(new Color(255, 255, 255));
+		btn5.setFont(new Font("Tahoma", Font.BOLD, 25));
+		btn5.setBorderPainted(false);
 
-		add(panelAdmin);
-		panelAdmin.add(panelSidebar);
+		add(panelUser);
+		panelUser.add(panelSidebar);
 		panelSidebar.add(logo);
 		panelSidebar.add(textAdmin);
 		panelSidebar.add(line1);
@@ -132,18 +143,18 @@ public class VentanaUsuario extends JFrame{
 		panelSidebar.add(btn3);
 		panelSidebar.add(btn4);
 		panelSidebar.add(btnLogout);
-		panelAdmin.add(panel1);
-		panelAdmin.add(panel2);
-		panelAdmin.add(panel3);
-		panelAdmin.add(panel4);
+		panelUser.add(panel1);
+		panelUser.add(panel2);
+		panelUser.add(panel3);
+		panelUser.add(panel4);
 	}
 
-	public JPanel getPanelAdmin() {
-		return panelAdmin;
+	public JPanel getpanelUser() {
+		return panelUser;
 	}
 
-	public void setPanelAdmin(JPanel panelAdmin) {
-		this.panelAdmin = panelAdmin;
+	public void setpanelUser(JPanel panelUser) {
+		this.panelUser = panelUser;
 	}
 
 	public JPanel getPanelSidebar() {
@@ -249,5 +260,14 @@ public class VentanaUsuario extends JFrame{
 	public void setLine1(JSeparator line1) {
 		this.line1 = line1;
 	}
+
+	public JButton getBtn5() {
+		return btn5;
+	}
+
+	public void setBtn5(JButton btn5) {
+		this.btn5 = btn5;
+	}
+	
 	
 }

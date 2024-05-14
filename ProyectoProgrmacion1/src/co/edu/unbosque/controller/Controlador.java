@@ -79,6 +79,7 @@ public class Controlador implements ActionListener {
 					vF.getVenPA().setVisible(true); // Mostrar panel de administrador
 				} else {
 					vF.getVenUsu().setVisible(true);
+					vF.getVenUsu().getTextAdmin().setText(user);
 				}
 			} else {
 				JOptionPane.showMessageDialog(null, "Usuario o contraseña incorrectos", "Error de inicio de sesión",
