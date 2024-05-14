@@ -4,7 +4,7 @@ package co.edu.unbosque.model;
 //La clase SprintersDTO representa a un ciclista "Sprinter"
 //en el sistema. Extiende la clase CiclistaDTO, lo que significa que hereda
 //todos los atributos y métodos de la clase CiclistaDTO
-class SprintersDTO extends CiclistaDTO {
+public class SprintersDTO extends CiclistaDTO {
 private float potenciaPromPedaleo;
 private float velocidadPromSprint;
 

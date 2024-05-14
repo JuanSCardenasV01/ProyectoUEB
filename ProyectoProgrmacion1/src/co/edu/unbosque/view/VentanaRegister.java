@@ -205,6 +205,7 @@ public class VentanaRegister extends JFrame {
 		line5.setBounds(100, 130, 150, 20);
 		line5.setForeground(Color.black);
 		//Cyclist panel
+		
 		panelCyclist = new JPanel();
 		panelCyclist.setLayout(null);
 		panelCyclist.setBounds(400, 50, 350, 300);
@@ -408,6 +409,7 @@ public class VentanaRegister extends JFrame {
 		add(panelLogin);
 		panelLogin.add(panelMasseur);
 		panelLogin.add(panelDirector);
+		panelLogin.add(panelCyclist);
 		panelLogin.add(textTittle);
 		panelLogin.add(textName);
 		panelLogin.add(fieldName);
@@ -432,6 +434,9 @@ public class VentanaRegister extends JFrame {
 		panelDirector.add(textDirector);
 		panelDirector.add(fieldDirector);
 		panelDirector.add(line5);
+		panelCyclist.add(textCyclistId);
+		panelCyclist.add(fieldCyclistId);
+		panelCyclist.add(line6);
 
 	}
 

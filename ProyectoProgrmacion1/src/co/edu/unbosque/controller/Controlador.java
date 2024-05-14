@@ -154,11 +154,19 @@ public class Controlador implements ActionListener {
 			case "Massage": {
 				vF.getVenRe().getPanelMasseur().setVisible(true);
 				vF.getVenRe().getPanelDirector().setVisible(false);
+				vF.getVenRe().getPanelCyclist().setVisible(false);
 				break;
 			}
 			case "Director": {
 				vF.getVenRe().getPanelMasseur().setVisible(false);
 				vF.getVenRe().getPanelDirector().setVisible(true);
+				vF.getVenRe().getPanelCyclist().setVisible(false);
+				break;
+			}
+			case "Cyclicist": {
+				vF.getVenRe().getPanelMasseur().setVisible(false);
+				vF.getVenRe().getPanelDirector().setVisible(false);
+				vF.getVenRe().getPanelCyclist().setVisible(true);
 				break;
 			}
 			}
