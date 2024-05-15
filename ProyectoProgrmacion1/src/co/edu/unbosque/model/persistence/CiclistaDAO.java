@@ -1,4 +1,4 @@
-package co.edu.unbosque.model.persistence;
+ package co.edu.unbosque.model.persistence;
 
 import java.util.ArrayList;
 
@@ -13,7 +13,7 @@ public class CiclistaDAO implements CRUDOperation <CiclistaDTO>{
 		// TODO Auto-generated constructor stub
 		list = new ArrayList<>();
 	
-		leerDesdeArchivoSerializado();
+		
 		escribirArchivo();
 	}
 	public void escribirArchivo() {
@@ -59,15 +59,7 @@ public class CiclistaDAO implements CRUDOperation <CiclistaDTO>{
 		}
 	}
 
-	public void leerDesdeArchivoSerializado() {
-		Object contenido = FileHandler.abrirYLeerSerializado(SERIALIZED_FILE_NAME);
-		if (contenido == null) {
-			list = new ArrayList<>();
-
-		} else {
-			list = (ArrayList<CiclistaDTO>) contenido;
-		}
-	}
+	
 
 	public String checkIndex(int index) {
 		if (index < 0) {

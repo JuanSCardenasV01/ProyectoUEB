@@ -13,7 +13,7 @@ public class ClasicomanosDAO implements CRUDOperation <ClasicomanosDTO>{
 		// TODO Auto-generated constructor stub
 		list = new ArrayList<>();
 	
-		leerDesdeArchivoSerializado();
+		
 		escribirArchivo();
 	}
 	public void escribirArchivo() {
@@ -60,16 +60,7 @@ public class ClasicomanosDAO implements CRUDOperation <ClasicomanosDTO>{
 		}
 	}
 
-	public void leerDesdeArchivoSerializado() {
-		Object contenido = FileHandler.abrirYLeerSerializado(SERIALIZED_FILE_NAME);
-		if (contenido == null) {
-			list = new ArrayList<>();
-
-		} else {
-			list = (ArrayList<ClasicomanosDTO>) contenido;
-		}
-	}
-
+	
 	public String checkIndex(int index) {
 		if (index < 0) {
 			return "n";

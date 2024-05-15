@@ -12,7 +12,7 @@ public class DirectorDAO implements CRUDOperation <DirectorDTO>{
 	public DirectorDAO() {
 		// TODO Auto-generated constructor stub
 		list = new ArrayList<>();
-		leerDesdeArchivoSerializado();
+		
 		escribirArchivo();
 	}
 	public void escribirArchivo() {
@@ -50,15 +50,7 @@ public class DirectorDAO implements CRUDOperation <DirectorDTO>{
 		}
 	}
 
-	public void leerDesdeArchivoSerializado() {
-		Object contenido = FileHandler.abrirYLeerSerializado(SERIALIZED_FILE_NAME);
-		if (contenido == null) {
-			list = new ArrayList<>();
-
-		} else {
-			list = (ArrayList<DirectorDTO>) contenido;
-		}
-	}
+	
 
 	public String checkIndex(int index) {
 		if (index < 0) {

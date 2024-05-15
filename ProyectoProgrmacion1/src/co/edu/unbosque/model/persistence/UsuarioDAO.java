@@ -15,7 +15,7 @@ public UsuarioDAO() {
 	// TODO Auto-generated constructor stub
 	list = new ArrayList<>();
 	
-	leerDesdeArchivoSerializado();
+	
 	escribirArchivo();
 }
 public void escribirArchivo() {
@@ -51,15 +51,7 @@ public void leerArchivo() {
 	}
 }
 
-public void leerDesdeArchivoSerializado() {
-	Object contenido = FileHandler.abrirYLeerSerializado(SERIALIZED_FILE_NAME);
-	if (contenido == null) {
-		list = new ArrayList<>();
 
-	} else {
-		list = (ArrayList<UsuarioDTO>) contenido;
-	}
-}
 
 public String checkIndex(int index) {
 	if (index < 0) {

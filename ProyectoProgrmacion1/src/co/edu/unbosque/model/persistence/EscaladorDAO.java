@@ -13,7 +13,7 @@ public class EscaladorDAO implements CRUDOperation<EscaladorDTO> {
 		// TODO Auto-generated constructor stub
 		list = new ArrayList<>();
 		
-		leerDesdeArchivoSerializado();
+		
 		escribirArchivo();
 	}
 	public void escribirArchivo() {
@@ -63,15 +63,7 @@ public class EscaladorDAO implements CRUDOperation<EscaladorDTO> {
 		}
 	}
 
-	public void leerDesdeArchivoSerializado() {
-		Object contenido = FileHandler.abrirYLeerSerializado(SERIALIZED_FILE_NAME);
-		if (contenido == null) {
-			list = new ArrayList<>();
-
-		} else {
-			list = (ArrayList<EscaladorDTO>) contenido;
-		}
-	}
+	
 
 	public String checkIndex(int index) {
 		if (index < 0) {

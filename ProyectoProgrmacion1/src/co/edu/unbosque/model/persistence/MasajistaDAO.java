@@ -13,7 +13,7 @@ public class MasajistaDAO implements CRUDOperation<MasajistaDTO>{
 		// TODO Auto-generated constructor stub
 		list = new ArrayList<>();
 	
-		leerDesdeArchivoSerializado();
+		
 		escribirArchivo();
 	}
 	public void escribirArchivo() {
@@ -51,15 +51,7 @@ public class MasajistaDAO implements CRUDOperation<MasajistaDTO>{
 		}
 	}
 
-	public void leerDesdeArchivoSerializado() {
-		Object contenido = FileHandler.abrirYLeerSerializado(SERIALIZED_FILE_NAME);
-		if (contenido == null) {
-			list = new ArrayList<>();
-
-		} else {
-			list = (ArrayList<MasajistaDTO>) contenido;
-		}
-	}
+	
 
 	public String checkIndex(int index) {
 		if (index < 0) {

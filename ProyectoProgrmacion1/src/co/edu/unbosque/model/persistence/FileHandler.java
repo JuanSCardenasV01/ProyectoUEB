@@ -48,30 +48,7 @@ public class FileHandler {
 			e.printStackTrace();
 		}
 	}
-	public static Object abrirYLeerSerializado(String url) {
-		Object contenido = null;
-		archivo = new File(url);
-		
-			try {
-				if (!archivo.exists()) {
-				archivo.createNewFile();
-			} 
-				fis = new FileInputStream(archivo);
-				ois = new ObjectInputStream(fis);
-				
-				contenido = ois.readObject();
-				fis.close();
-				ois.close();
-			}catch (IOException e) {
-				System.out.println("No se pudo leer el archivo serializado(entrada)");
-				e.printStackTrace();
-			}catch (ClassNotFoundException e) {
-				System.out.println("Error al obtener el contenido");
-				e.printStackTrace();
-				
-			}
-			return contenido;
-	}
+	
 		
 		
 		
