@@ -176,7 +176,7 @@ public class Controlador implements ActionListener {
 			case"Time Trialist":{
 				vF.getVenRe().getPanelMasseur().setVisible(false);
 				vF.getVenRe().getPanelDirector().setVisible(false);
-				vF.getVenRe().getPanelCyclist().setVisible(false);
+				vF.getVenRe().getPanelCyclist().setVisible(true);
 				vF.getVenRe().getPanelCounterCyclist().setVisible(true);
 				 break;
 			}
@@ -185,6 +185,42 @@ public class Controlador implements ActionListener {
 				vF.getVenRe().getPanelDirector().setVisible(false);
 				vF.getVenRe().getPanelCyclist().setVisible(true);
 				vF.getVenRe().getPanelClimber().setVisible(true);
+				break;
+			}
+			case "Rider":{
+				vF.getVenRe().getPanelMasseur().setVisible(false);
+				vF.getVenRe().getPanelDirector().setVisible(false);vF.getVenRe().getPanelMasseur().setVisible(false);
+				vF.getVenRe().getPanelDirector().setVisible(false);
+				vF.getVenRe().getPanelRider().setVisible(true);
+				vF.getVenRe().getPanelCyclist().setVisible(true);
+				break;
+			}
+			case "Classical Cyclist":{
+				vF.getVenRe().getPanelMasseur().setVisible(false);
+				vF.getVenRe().getPanelDirector().setVisible(false);vF.getVenRe().getPanelMasseur().setVisible(false);
+				vF.getVenRe().getPanelDirector().setVisible(false);
+				vF.getVenRe().getPanelRider().setVisible(false);
+				vF.getVenRe().getPanelCyclist().setVisible(true);
+				vF.getVenRe().getPanelClassicalCyclist().setVisible(true);
+				break;
+			}
+			case "Gregarius":{
+				vF.getVenRe().getPanelMasseur().setVisible(false);
+				vF.getVenRe().getPanelDirector().setVisible(false);vF.getVenRe().getPanelMasseur().setVisible(false);
+				vF.getVenRe().getPanelDirector().setVisible(false);
+				vF.getVenRe().getPanelRider().setVisible(false);
+				vF.getVenRe().getPanelCyclist().setVisible(true);
+				vF.getVenRe().getPanelGregarious().setVisible(true);
+				break;
+			}
+			case "Sprinter":{
+				vF.getVenRe().getPanelMasseur().setVisible(false);
+				vF.getVenRe().getPanelDirector().setVisible(false);vF.getVenRe().getPanelMasseur().setVisible(false);
+				vF.getVenRe().getPanelDirector().setVisible(false);
+				vF.getVenRe().getPanelRider().setVisible(false);
+				vF.getVenRe().getPanelCyclist().setVisible(true);
+				vF.getVenRe().getPanelGregarious().setVisible(false);
+				vF.getVenRe().getPanelSprinter().setVisible(true);
 				break;
 			}
 			}

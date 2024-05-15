@@ -11,6 +11,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JProgressBar;
 import javax.swing.JSeparator;
 import javax.swing.SwingConstants;
 
@@ -30,6 +31,7 @@ public class VentanaUsuario extends JFrame{
 	private JButton btn4;
 	private JButton btn5;
 	private JSeparator line1;
+	private JProgressBar simulation;
 
 	public VentanaUsuario() {
 		setSize(800, 500);
@@ -132,6 +134,8 @@ public class VentanaUsuario extends JFrame{
 		btn5.setForeground(new Color(255, 255, 255));
 		btn5.setFont(new Font("Tahoma", Font.BOLD, 25));
 		btn5.setBorderPainted(false);
+		
+	
 
 		add(panelUser);
 		panelUser.add(panelSidebar);

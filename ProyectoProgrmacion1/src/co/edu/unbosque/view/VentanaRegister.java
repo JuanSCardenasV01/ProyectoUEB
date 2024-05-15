@@ -290,46 +290,46 @@ public class VentanaRegister extends JFrame {
 		
 		panelRider = new JPanel();
 		panelRider.setLayout(null);
-		panelRider.setBounds(400, 50, 350, 300);
-		panelRider.setBackground(new Color(255, 255, 255));
+		panelRider.setBounds(400, 300, 350, 70);
+		panelRider.setBackground(Color.white);
 		panelRider.setVisible(false);
 		
 		textAverageVelRodador = new JLabel();
-		textAverageVelRodador.setText("Id of the Cyclist");
-		textAverageVelRodador.setBounds(0, 220, 150, 30);
+		textAverageVelRodador.setText("Average Velocity");
+		textAverageVelRodador.setBounds(0, 0, 150, 30);
 		textAverageVelRodador.setFont(new Font("Tahoma", Font.BOLD, 15));
 
 		fieldAverageVelRodador = new JTextField();
-		fieldAverageVelRodador.setBounds(180, 220, 50, 25);
+		fieldAverageVelRodador.setBounds(180, 0, 50, 25);
 		fieldAverageVelRodador.setFont(new Font("Tahoma", 0, 15));
 		fieldAverageVelRodador.setBorder(null);
 
 		line11 = new JSeparator();
-		line11.setBounds(170, 130, 50, 20);
+		line11.setBounds(170, 50, 50, 20);
 		line11.setForeground(Color.black);
 		
 		panelSprinter = new JPanel();
 		panelSprinter.setLayout(null);
-		panelSprinter.setBounds(400, 50, 350, 300);
-		panelSprinter.setBackground(new Color(255, 255, 255));
+		panelSprinter.setBounds(400, 300, 350, 70);
+		panelSprinter.setBackground(Color.white);
 		panelSprinter.setVisible(false);
 		
 		textAveragePedPowSprinter = new JLabel();
-		textAveragePedPowSprinter.setText("Id of the Cyclist");
-		textAveragePedPowSprinter.setBounds(0, 220, 150, 30);
+		textAveragePedPowSprinter.setText("average pedal power");
+		textAveragePedPowSprinter.setBounds(0, 0, 150, 30);
 		textAveragePedPowSprinter.setFont(new Font("Tahoma", Font.BOLD, 15));
 
 		fieldAveragePedPowSprinter = new JTextField();
-		fieldAveragePedPowSprinter.setBounds(180, 220, 50, 25);
+		fieldAveragePedPowSprinter.setBounds(180, 0, 50, 25);
 		fieldAveragePedPowSprinter.setFont(new Font("Tahoma", 0, 15));
 		fieldAveragePedPowSprinter.setBorder(null);
 
 		line12 = new JSeparator();
-		line12.setBounds(170, 130, 50, 20);
+		line12.setBounds(170, 50, 50, 20);
 		line12.setForeground(Color.black);
 		
 		textAveragevelocitySprinter = new JLabel();
-		textAveragevelocitySprinter.setText("Id of the Cyclist");
+		textAveragevelocitySprinter.setText("Average velocity");
 		textAveragevelocitySprinter.setBounds(0, 240, 150, 30);
 		textAveragevelocitySprinter.setFont(new Font("Tahoma", Font.BOLD, 15));
 
@@ -344,27 +344,27 @@ public class VentanaRegister extends JFrame {
 		
 		panelGregarious = new JPanel();
 		panelGregarious.setLayout(null);
-		panelGregarious.setBounds(400, 50, 350, 300);
-		panelGregarious.setBackground(new Color(255, 255, 255));
+		panelGregarious.setBounds(400, 300, 350, 70);
+		panelGregarious.setBackground(Color.white);
 		panelGregarious.setVisible(false);
 		
 		textPelotonFunctionGregario = new JLabel();
-		textPelotonFunctionGregario.setText("Id of the Cyclist");
-		textPelotonFunctionGregario.setBounds(0, 220, 150, 30);
+		textPelotonFunctionGregario.setText("team function");
+		textPelotonFunctionGregario.setBounds(0, 0, 150, 30);
 		textPelotonFunctionGregario.setFont(new Font("Tahoma", Font.BOLD, 15));
 
 		fieldPelotonFunctionGregario = new JTextField();
-		fieldPelotonFunctionGregario.setBounds(180, 220, 50, 25);
+		fieldPelotonFunctionGregario.setBounds(180, 0, 50, 25);
 		fieldPelotonFunctionGregario.setFont(new Font("Tahoma", 0, 15));
 		fieldPelotonFunctionGregario.setBorder(null);
 
 		line14 = new JSeparator();
-		line14.setBounds(170, 130, 50, 20);
+		line14.setBounds(170, 50, 50, 20);
 		line14.setForeground(Color.black);
 		
 		panelClimber = new JPanel();
 		panelClimber.setLayout(null);
-		panelClimber.setBounds(400, 300, 350, 200);
+		panelClimber.setBounds(400, 300, 350, 70);
 		panelClimber.setBackground(Color.white);
 		panelClimber.setVisible(false);
 		
@@ -384,56 +384,56 @@ public class VentanaRegister extends JFrame {
 		
 		textmaxRampDegreeEscalator = new JLabel();
 		textmaxRampDegreeEscalator.setText("Max ramp Degree");
-		textmaxRampDegreeEscalator.setBounds(0, 30, 150, 30);
+		textmaxRampDegreeEscalator.setBounds(0, 20, 150, 30);
 		textmaxRampDegreeEscalator.setFont(new Font("Tahoma", Font.BOLD, 15));
 
 		fieldmaxRampDegreeEscalator = new JTextField();
-		fieldmaxRampDegreeEscalator.setBounds(180, 30, 50, 25);
+		fieldmaxRampDegreeEscalator.setBounds(180, 20, 50, 25);
 		fieldmaxRampDegreeEscalator.setFont(new Font("Tahoma", 0, 15));
 		fieldmaxRampDegreeEscalator.setBorder(null);
 
 		line16 = new JSeparator();
-		line16.setBounds(170, 60, 50, 20);
+		line16.setBounds(170, 50, 50, 20);
 		line16.setForeground(Color.black);
-		
+	///////////////////////////////////////////////////////	
 		panelCounterCyclist = new JPanel();
 		panelCounterCyclist.setLayout(null);
-		panelCounterCyclist.setBounds(400, 50, 350, 300);
-		panelCounterCyclist.setBackground(new Color(255, 255, 255));
+		panelCounterCyclist.setBounds(400, 300, 350, 70);
+		panelCounterCyclist.setBackground(Color.white);
 		panelCounterCyclist.setVisible(false);
 		
 		textmaxVelContrarrelojista = new JLabel();
-		textmaxVelContrarrelojista.setText("Id of the Cyclist");
-		textmaxVelContrarrelojista.setBounds(0, 220, 150, 30);
+		textmaxVelContrarrelojista.setText("Max velocity");
+		textmaxVelContrarrelojista.setBounds(0, 0, 150, 30);
 		textmaxVelContrarrelojista.setFont(new Font("Tahoma", Font.BOLD, 15));
 
 		fieldmaxVelContrarrelojista = new JTextField();
-		fieldmaxVelContrarrelojista.setBounds(180, 220, 50, 25);
+		fieldmaxVelContrarrelojista.setBounds(180, 0, 50, 25);
 		fieldmaxVelContrarrelojista.setFont(new Font("Tahoma", 0, 15));
 		fieldmaxVelContrarrelojista.setBorder(null);
 
 		line17 = new JSeparator();
-		line17.setBounds(170, 130, 50, 20);
+		line17.setBounds(170, 30, 50, 20);
 		line17.setForeground(Color.black);
 		
 		panelClassicalCyclist = new JPanel();
 		panelClassicalCyclist.setLayout(null);
-		panelClassicalCyclist.setBounds(400, 50, 350, 300);
-		panelClassicalCyclist.setBackground(new Color(255, 255, 255));
+		panelClassicalCyclist.setBounds(400, 300, 350, 70);
+		panelClassicalCyclist.setBackground(Color.white);
 		panelClassicalCyclist.setVisible(false);
 		
 		textAveragePedalSpeedClasico = new JLabel();
-		textAveragePedalSpeedClasico.setText("Id of the Cyclist");
-		textAveragePedalSpeedClasico.setBounds(0, 220, 150, 30);
+		textAveragePedalSpeedClasico.setText("Aver. pedal speed");
+		textAveragePedalSpeedClasico.setBounds(0, 0, 150, 30);
 		textAveragePedalSpeedClasico.setFont(new Font("Tahoma", Font.BOLD, 15));
 
 		fieldAveragePedalSpeedClasico = new JTextField();
-		fieldAveragePedalSpeedClasico.setBounds(180, 220, 50, 25);
+		fieldAveragePedalSpeedClasico.setBounds(180, 0, 50, 25);
 		fieldAveragePedalSpeedClasico.setFont(new Font("Tahoma", 0, 15));
 		fieldAveragePedalSpeedClasico.setBorder(null);
 
 		line18 = new JSeparator();
-		line18.setBounds(170, 130, 50, 20);
+		line18.setBounds(170, 30, 50, 20);
 		line18.setForeground(Color.black);
 //
 		btnBack = new JButton("Back");
