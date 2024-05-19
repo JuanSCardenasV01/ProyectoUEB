@@ -32,7 +32,7 @@ public class Controlador implements ActionListener {
 
 	// Método que hace visible la ventana de registro inicialmente.
 	public void run() {
-		vF.getVenRe().setVisible(true);
+		vF.getVenPA().setVisible(true);
 		
 	}
 
@@ -47,14 +47,14 @@ public class Controlador implements ActionListener {
 		vF.getVenRe().getBtnBack().setActionCommand("btnBack");
 		vF.getVenPA().getBtnLogout().addActionListener(this);
 		vF.getVenPA().getBtnLogout().setActionCommand("btnLogout");
-		vF.getVenPA().getBtn1().addActionListener(this);
-		vF.getVenPA().getBtn1().setActionCommand("btn1");
-		vF.getVenPA().getBtn2().addActionListener(this);
-		vF.getVenPA().getBtn2().setActionCommand("btn2");
-		vF.getVenPA().getBtn3().addActionListener(this);
-		vF.getVenPA().getBtn3().setActionCommand("btn3");
-		vF.getVenPA().getBtn4().addActionListener(this);
-		vF.getVenPA().getBtn4().setActionCommand("btn4");
+		vF.getVenPA().getBtnPanelShowU().addActionListener(this);
+		vF.getVenPA().getBtnPanelShowU().setActionCommand("btnPanelShowU");
+		vF.getVenPA().getBtnPanelDeleteU().addActionListener(this);
+		vF.getVenPA().getBtnPanelDeleteU().setActionCommand("btnPanelDeleteU");
+		vF.getVenPA().getBtnPanelShowT().addActionListener(this);
+		vF.getVenPA().getBtnPanelShowT().setActionCommand("btnPanelShowT");
+		vF.getVenPA().getBtnPanelDeleteT().addActionListener(this);
+		vF.getVenPA().getBtnPanelDeleteT().setActionCommand("btnPanelDeleteT");
 		vF.getVenRe().getBtnRegister().addActionListener(this);
 		vF.getVenRe().getBtnRegister().setActionCommand("btnRegister");
 		vF.getVenRe().getComboBoxOcupation().addActionListener(this);
@@ -82,6 +82,7 @@ public class Controlador implements ActionListener {
 					vF.getVenPA().setVisible(true); // Mostrar panel de administrador
 				} else {
 					vF.getVenUsu().setVisible(true);
+					vF.getVenUsu().getTextAdmin().setText(user);
 										
 				}
 			} else {
@@ -114,40 +115,40 @@ public class Controlador implements ActionListener {
 			vF.getVenLog().setVisible(true);
 			break;
 		}
-		case "btn1": {
+		case "btnPanelShowU": {
 			// Ocultar todos los paneles
-			vF.getVenPA().getPanel2().setVisible(false);
-			vF.getVenPA().getPanel3().setVisible(false);
-			vF.getVenPA().getPanel4().setVisible(false);
+			vF.getVenPA().getPanelDeleteU().setVisible(false);
+			vF.getVenPA().getPanelShowT().setVisible(false);
+			vF.getVenPA().getPanelDeleteT().setVisible(false);
 			// Mostrar el panel correspondiente
-			vF.getVenPA().getPanel1().setVisible(true);
+			vF.getVenPA().getPanelShowU().setVisible(true);
 			break;
 		}
-		case "btn2": {
+		case "btnPanelDeleteU": {
 			// Ocultar todos los paneles
-			vF.getVenPA().getPanel1().setVisible(false);
-			vF.getVenPA().getPanel3().setVisible(false);
-			vF.getVenPA().getPanel4().setVisible(false);
+			vF.getVenPA().getPanelShowU().setVisible(false);
+			vF.getVenPA().getPanelShowT().setVisible(false);
+			vF.getVenPA().getPanelDeleteT().setVisible(false);
 			// Mostrar el panel correspondiente
-			vF.getVenPA().getPanel2().setVisible(true);
+			vF.getVenPA().getPanelDeleteU().setVisible(true);
 			break;
 		}
-		case "btn3": {
+		case "btnPanelShowT": {
 			// Ocultar todos los paneles
-			vF.getVenPA().getPanel1().setVisible(false);
-			vF.getVenPA().getPanel2().setVisible(false);
-			vF.getVenPA().getPanel4().setVisible(false);
+			vF.getVenPA().getPanelShowU().setVisible(false);
+			vF.getVenPA().getPanelDeleteU().setVisible(false);
+			vF.getVenPA().getPanelDeleteT().setVisible(false);
 			// Mostrar el panel correspondiente
-			vF.getVenPA().getPanel3().setVisible(true);
+			vF.getVenPA().getPanelShowT().setVisible(true);
 			break;
 		}
-		case "btn4": {
+		case "btnPanelDeleteT": {
 			// Ocultar todos los paneles
-			vF.getVenPA().getPanel1().setVisible(false);
-			vF.getVenPA().getPanel2().setVisible(false);
-			vF.getVenPA().getPanel3().setVisible(false);
+			vF.getVenPA().getPanelShowU().setVisible(false);
+			vF.getVenPA().getPanelDeleteU().setVisible(false);
+			vF.getVenPA().getPanelShowT().setVisible(false);
 			// Mostrar el panel correspondiente
-			vF.getVenPA().getPanel4().setVisible(true);
+			vF.getVenPA().getPanelDeleteT().setVisible(true);
 			break;
 		}
 //		Maneja el cambio de selección en el combobox de ocupación en la ventana de registro.
