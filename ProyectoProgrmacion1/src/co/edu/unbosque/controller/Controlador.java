@@ -32,7 +32,7 @@ public class Controlador implements ActionListener {
 
 	// Método que hace visible la ventana de registro inicialmente.
 	public void run() {
-		vF.getVenUsu().getPanelViewRaces().setVisible(true);
+		vF.getVenUsu().setVisible(true);
 		
 	}
 

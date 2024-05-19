@@ -12,6 +12,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
+import javax.swing.JScrollPane;
 import javax.swing.JSeparator;
 import javax.swing.JTable;
 import javax.swing.JTextField;
@@ -219,7 +220,31 @@ public class VentanaPrincipalAdmin extends JFrame {
 		panelDeleteT.add(fieldDeleteT);
 		panelDeleteT.add(line3);
 		panelDeleteT.add(btnDeleteT);
+		panelShowU.add(tableUsers);
 	}
+	
+	public void startTable(ArrayList<UsuarioDTO> usuarios) {
+        String[] columnNames = {"Name", "Mail", "Password", "Gender" };
+        DefaultTableModel model = new DefaultTableModel(columnNames, 0);
+        for (UsuarioDTO usuario : usuarios) {
+            Object[] rowData = {   
+                usuario.getNombre(),
+                usuario.getCorreo(),
+                usuario.getContraseña(),
+                usuario.getGenero()
+            };
+            model.addRow(rowData);
+        }
+
+        tableUsers.setModel(model);
+        JScrollPane scrollPane = new JScrollPane(tableUsers);
+        scrollPane.setBounds(10, 50, 630, 400);
+
+        panelShowU.removeAll();
+        panelShowU.add(scrollPane);
+        panelShowU.revalidate();
+        panelShowU.repaint();
+    }
 
 	public JPanel getPanelAdmin() {
 		return panelAdmin;
@@ -395,6 +420,30 @@ public class VentanaPrincipalAdmin extends JFrame {
 
 	public void setLine3(JSeparator line3) {
 		this.line3 = line3;
+	}
+
+	public JPanel getPanelTableUsers() {
+		return panelTableUsers;
+	}
+
+	public void setPanelTableUsers(JPanel panelTableUsers) {
+		this.panelTableUsers = panelTableUsers;
+	}
+
+	public JTable getTableUsers() {
+		return tableUsers;
+	}
+
+	public void setTableUsers(JTable tableUsers) {
+		this.tableUsers = tableUsers;
+	}
+
+	public JTable getTableTeams() {
+		return tableTeams;
+	}
+
+	public void setTableTeams(JTable tableTeams) {
+		this.tableTeams = tableTeams;
 	}
 
 
