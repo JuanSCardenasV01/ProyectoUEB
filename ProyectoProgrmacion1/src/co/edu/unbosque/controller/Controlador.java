@@ -32,7 +32,7 @@ public class Controlador implements ActionListener {
 
 	// Método que hace visible la ventana de registro inicialmente.
 	public void run() {
-		vF.getVenPA().setVisible(true);
+		vF.getVenUsu().getPanelViewRaces().setVisible(true);
 		
 	}
 
@@ -59,8 +59,10 @@ public class Controlador implements ActionListener {
 		vF.getVenRe().getBtnRegister().setActionCommand("btnRegister");
 		vF.getVenRe().getComboBoxOcupation().addActionListener(this);
 		vF.getVenRe().getComboBoxOcupation().setActionCommand("comboBoxG");
-		vF.getVenUsu().getBtn4().addActionListener(this);
-		vF.getVenUsu().getBtn4().setActionCommand("btn4");
+		vF.getVenUsu().getBtnViewRaces().addActionListener(this);
+		vF.getVenUsu().getBtnViewRaces().setActionCommand("btnViewRaces");
+		vF.getVenUsu().getBtnCreateTeam().addActionListener(this);
+		vF.getVenUsu().getBtnCreateTeam().setActionCommand("btnCreateTeam");
 
 	}
 

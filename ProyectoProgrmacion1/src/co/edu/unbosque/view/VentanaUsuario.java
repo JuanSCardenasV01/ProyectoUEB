@@ -26,11 +26,11 @@ public class VentanaUsuario extends JFrame{
 	private JLabel textAdmin;
 	private JLabel logo;
 	private JButton btnLogout;
-	private JButton btn1;
-	private JButton btn2;
-	private JButton btn3;
-	private JButton btn4;
-	private JButton btn5;
+	private JButton btnCreateTeam;
+	private JButton btnOtherTeams;
+	private JButton btnUpdateProfile;
+	private JButton btnViewRaces;
+	private JButton btnResults;
 	private JButton btnMountainRace;
 	private JButton btnPlainWCurvesRace;
 	private JButton btnSemiPlainRace;
@@ -190,40 +190,40 @@ public class VentanaUsuario extends JFrame{
 		btnLogout.setBorderPainted(false);
 
 		
-		btn1 = new JButton("CREATE YOUR TEAM");
-		btn1.setBounds(0, 175, 200, 30);
-		btn1.setBackground(new Color(12, 116, 127));
-		btn1.setForeground(new Color(255, 255, 255));
-		btn1.setFont(new Font("Tahoma", Font.BOLD, 15));
-		btn1.setBorderPainted(false);
+		btnCreateTeam = new JButton("CREATE YOUR TEAM");
+		btnCreateTeam.setBounds(0, 175, 200, 30);
+		btnCreateTeam.setBackground(new Color(12, 116, 127));
+		btnCreateTeam.setForeground(new Color(255, 255, 255));
+		btnCreateTeam.setFont(new Font("Tahoma", Font.BOLD, 15));
+		btnCreateTeam.setBorderPainted(false);
 		
-		btn2 = new JButton("OTHER TEAMS");
-		btn2.setBounds(0, 225, 200, 30);
-		btn2.setBackground(new Color(12, 116, 127));
-		btn2.setForeground(new Color(255, 255, 255));
-		btn2.setFont(new Font("Tahoma", Font.BOLD, 20));
-		btn2.setBorderPainted(false);
+		btnOtherTeams = new JButton("OTHER TEAMS");
+		btnOtherTeams.setBounds(0, 225, 200, 30);
+		btnOtherTeams.setBackground(new Color(12, 116, 127));
+		btnOtherTeams.setForeground(new Color(255, 255, 255));
+		btnOtherTeams.setFont(new Font("Tahoma", Font.BOLD, 20));
+		btnOtherTeams.setBorderPainted(false);
 		
-		btn3 = new JButton("UPDATE PROFILE");
-		btn3.setBounds(0, 275, 200, 30);
-		btn3.setBackground(new Color(12, 116, 127));
-		btn3.setForeground(new Color(255, 255, 255));
-		btn3.setFont(new Font("Tahoma", Font.BOLD, 15));
-		btn3.setBorderPainted(false);
+		btnUpdateProfile = new JButton("UPDATE PROFILE");
+		btnUpdateProfile.setBounds(0, 275, 200, 30);
+		btnUpdateProfile.setBackground(new Color(12, 116, 127));
+		btnUpdateProfile.setForeground(new Color(255, 255, 255));
+		btnUpdateProfile.setFont(new Font("Tahoma", Font.BOLD, 15));
+		btnUpdateProfile.setBorderPainted(false);
 		
-		btn4 = new JButton("VIEW RACES");
-		btn4.setBounds(0, 325, 200, 30);
-		btn4.setBackground(new Color(12, 116, 127));
-		btn4.setForeground(new Color(255, 255, 255));
-		btn4.setFont(new Font("Tahoma", Font.BOLD, 20));
-		btn4.setBorderPainted(false);
+		btnViewRaces = new JButton("VIEW RACES");
+		btnViewRaces.setBounds(0, 325, 200, 30);
+		btnViewRaces.setBackground(new Color(12, 116, 127));
+		btnViewRaces.setForeground(new Color(255, 255, 255));
+		btnViewRaces.setFont(new Font("Tahoma", Font.BOLD, 20));
+		btnViewRaces.setBorderPainted(false);
 		
-		btn5 = new JButton("RESULTS");
-		btn5.setBounds(0, 325, 200, 30);
-		btn5.setBackground(new Color(12, 116, 127));
-		btn5.setForeground(new Color(255, 255, 255));
-		btn5.setFont(new Font("Tahoma", Font.BOLD, 20));
-		btn5.setBorderPainted(false);
+		btnResults = new JButton("RESULTS");
+		btnResults.setBounds(0, 325, 200, 30);
+		btnResults.setBackground(new Color(12, 116, 127));
+		btnResults.setForeground(new Color(255, 255, 255));
+		btnResults.setFont(new Font("Tahoma", Font.BOLD, 20));
+		btnResults.setBorderPainted(false);
 		
 		btnStartSimulation = new JButton("Start simulation");
 		btnStartSimulation.setBounds(0, 325, 150, 30);
@@ -247,31 +247,28 @@ public class VentanaUsuario extends JFrame{
 		panelSidebar.add(logo);
 		panelSidebar.add(textAdmin);
 		panelSidebar.add(line1);
-		panelSidebar.add(btn1);
-		panelSidebar.add(btn2);
-		panelSidebar.add(btn3);
-		panelSidebar.add(btn4);
+		panelSidebar.add(btnCreateTeam);
+		panelSidebar.add(btnOtherTeams);
+		panelSidebar.add(btnUpdateProfile);
+		panelSidebar.add(btnViewRaces);
 		panelSidebar.add(btnLogout);
 		panelUser.add(panelCreateTeam);
 		panelUser.add(panelUpdateProfile);
 		panelUser.add(panelViewOtherTeams);
 		panelUser.add(panelViewRaces);
 		panelViewRaces.add(simulationBar1);
+		panelViewRaces.add(btnMountainRace);
+		panelViewRaces.add(btnOneDayRace);
+		panelViewRaces.add(btnPlainWCurvesRace);
+		panelViewRaces.add(btnSemiPlainRace);
+		panelViewRaces.add(btnStraightPlainRace);
 	}
 
-	public JButton getBtnsimulationBar1() {
-		return btnStartSimulation;
-	}
-
-	public void setBtnsimulationBar1(JButton btnsimulationBar1) {
-		this.btnStartSimulation = btnsimulationBar1;
-	}
-
-	public JPanel getpanelUser() {
+	public JPanel getPanelUser() {
 		return panelUser;
 	}
 
-	public void setpanelUser(JPanel panelUser) {
+	public void setPanelUser(JPanel panelUser) {
 		this.panelUser = panelUser;
 	}
 
@@ -283,35 +280,35 @@ public class VentanaUsuario extends JFrame{
 		this.panelSidebar = panelSidebar;
 	}
 
-	public JPanel getpanelCreateTeam() {
+	public JPanel getPanelCreateTeam() {
 		return panelCreateTeam;
 	}
 
-	public void setpanelCreateTeam(JPanel panelCreateTeam) {
+	public void setPanelCreateTeam(JPanel panelCreateTeam) {
 		this.panelCreateTeam = panelCreateTeam;
 	}
 
-	public JPanel getpanelUpdateProfile() {
+	public JPanel getPanelUpdateProfile() {
 		return panelUpdateProfile;
 	}
 
-	public void setpanelUpdateProfile(JPanel panelUpdateProfile) {
+	public void setPanelUpdateProfile(JPanel panelUpdateProfile) {
 		this.panelUpdateProfile = panelUpdateProfile;
 	}
 
-	public JPanel getpanelViewOtherTeams() {
+	public JPanel getPanelViewOtherTeams() {
 		return panelViewOtherTeams;
 	}
 
-	public void setpanelViewOtherTeams(JPanel panelViewOtherTeams) {
+	public void setPanelViewOtherTeams(JPanel panelViewOtherTeams) {
 		this.panelViewOtherTeams = panelViewOtherTeams;
 	}
 
-	public JPanel getpanelViewRaces() {
+	public JPanel getPanelViewRaces() {
 		return panelViewRaces;
 	}
 
-	public void setpanelViewRaces(JPanel panelViewRaces) {
+	public void setPanelViewRaces(JPanel panelViewRaces) {
 		this.panelViewRaces = panelViewRaces;
 	}
 
@@ -339,36 +336,156 @@ public class VentanaUsuario extends JFrame{
 		this.btnLogout = btnLogout;
 	}
 
-	public JButton getBtn1() {
-		return btn1;
+	public JButton getBtnCreateTeam() {
+		return btnCreateTeam;
 	}
 
-	public void setBtn1(JButton btn1) {
-		this.btn1 = btn1;
+	public void setBtnCreateTeam(JButton btnCreateTeam) {
+		this.btnCreateTeam = btnCreateTeam;
 	}
 
-	public JButton getBtn2() {
-		return btn2;
+	public JButton getBtnOtherTeams() {
+		return btnOtherTeams;
 	}
 
-	public void setBtn2(JButton btn2) {
-		this.btn2 = btn2;
+	public void setBtnOtherTeams(JButton btnOtherTeams) {
+		this.btnOtherTeams = btnOtherTeams;
 	}
 
-	public JButton getBtn3() {
-		return btn3;
+	public JButton getBtnUpdateProfile() {
+		return btnUpdateProfile;
 	}
 
-	public void setBtn3(JButton btn3) {
-		this.btn3 = btn3;
+	public void setBtnUpdateProfile(JButton btnUpdateProfile) {
+		this.btnUpdateProfile = btnUpdateProfile;
 	}
 
-	public JButton getBtn4() {
-		return btn4;
+	public JButton getBtnViewRaces() {
+		return btnViewRaces;
 	}
 
-	public void setBtn4(JButton btn4) {
-		this.btn4 = btn4;
+	public void setBtnViewRaces(JButton btnViewRaces) {
+		this.btnViewRaces = btnViewRaces;
+	}
+
+	public JButton getBtnResults() {
+		return btnResults;
+	}
+
+	public void setBtnResults(JButton btnResults) {
+		this.btnResults = btnResults;
+	}
+
+	public JButton getBtnMountainRace() {
+		return btnMountainRace;
+	}
+
+	public void setBtnMountainRace(JButton btnMountainRace) {
+		this.btnMountainRace = btnMountainRace;
+	}
+
+	public JButton getBtnPlainWCurvesRace() {
+		return btnPlainWCurvesRace;
+	}
+
+	public void setBtnPlainWCurvesRace(JButton btnPlainWCurvesRace) {
+		this.btnPlainWCurvesRace = btnPlainWCurvesRace;
+	}
+
+	public JButton getBtnSemiPlainRace() {
+		return btnSemiPlainRace;
+	}
+
+	public void setBtnSemiPlainRace(JButton btnSemiPlainRace) {
+		this.btnSemiPlainRace = btnSemiPlainRace;
+	}
+
+	public JButton getBtnStraightPlainRace() {
+		return btnStraightPlainRace;
+	}
+
+	public void setBtnStraightPlainRace(JButton btnStraightPlainRace) {
+		this.btnStraightPlainRace = btnStraightPlainRace;
+	}
+
+	public JButton getBtnOneDayRace() {
+		return btnOneDayRace;
+	}
+
+	public void setBtnOneDayRace(JButton btnOneDayRace) {
+		this.btnOneDayRace = btnOneDayRace;
+	}
+
+	public JButton getBtnStartSimulation() {
+		return btnStartSimulation;
+	}
+
+	public void setBtnStartSimulation(JButton btnStartSimulation) {
+		this.btnStartSimulation = btnStartSimulation;
+	}
+
+	public JTextField getFieldNewName() {
+		return fieldNewName;
+	}
+
+	public void setFieldNewName(JTextField fieldNewName) {
+		this.fieldNewName = fieldNewName;
+	}
+
+	public JTextField getFieldNewPassword() {
+		return fieldNewPassword;
+	}
+
+	public void setFieldNewPassword(JTextField fieldNewPassword) {
+		this.fieldNewPassword = fieldNewPassword;
+	}
+
+	public JTextField getFieldNewMail() {
+		return fieldNewMail;
+	}
+
+	public void setFieldNewMail(JTextField fieldNewMail) {
+		this.fieldNewMail = fieldNewMail;
+	}
+
+	public JTextField getFieldNewGender() {
+		return fieldNewGender;
+	}
+
+	public void setFieldNewGender(JTextField fieldNewGender) {
+		this.fieldNewGender = fieldNewGender;
+	}
+
+	public JLabel getTextNewName() {
+		return textNewName;
+	}
+
+	public void setTextNewName(JLabel textNewName) {
+		this.textNewName = textNewName;
+	}
+
+	public JLabel getTextNewPassword() {
+		return textNewPassword;
+	}
+
+	public void setTextNewPassword(JLabel textNewPassword) {
+		this.textNewPassword = textNewPassword;
+	}
+
+	public JLabel getTextNewMail() {
+		return textNewMail;
+	}
+
+	public void setTextNewMail(JLabel textNewMail) {
+		this.textNewMail = textNewMail;
+	}
+
+	public JLabel getTextNewGender() {
+		return textNewGender;
+	}
+
+	public void setTextNewGender(JLabel textNewGender) {
+		this.textNewGender = textNewGender;
 	}
 
 	public JSeparator getLine1() {
@@ -379,29 +496,14 @@ public class VentanaUsuario extends JFrame{
 		this.line1 = line1;
 	}
 
-	public JButton getBtn5() {
-		return btn5;
-	}
-
-	public void setBtn5(JButton btn5) {
-		this.btn5 = btn5;
-	}
-
-	public JPanel getPanelUser() {
-		return panelUser;
-	}
-
-	public void setPanelUser(JPanel panelUser) {
-		this.panelUser = panelUser;
-	}
-
-	public JProgressBar getsimulationBar1() {
+	public JProgressBar getSimulationBar1() {
 		return simulationBar1;
 	}
 
-	public void setsimulationBar1(JProgressBar simulationBar1) {
+	public void setSimulationBar1(JProgressBar simulationBar1) {
 		this.simulationBar1 = simulationBar1;
 	}
+
 	
 	
 }
