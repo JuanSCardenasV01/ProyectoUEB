@@ -13,15 +13,16 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JProgressBar;
 import javax.swing.JSeparator;
+import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 
 public class VentanaUsuario extends JFrame{
 	private JPanel panelUser;
 	private JPanel panelSidebar;
-	private JPanel panel1;
-	private JPanel panel2;
-	private JPanel panel3;
-	private JPanel panel4;
+	private JPanel panelCreateTeam;
+	private JPanel panelUpdateProfile;
+	private JPanel panelViewOtherTeams;
+	private JPanel panelViewRaces;
 	private JLabel textAdmin;
 	private JLabel logo;
 	private JButton btnLogout;
@@ -30,9 +31,22 @@ public class VentanaUsuario extends JFrame{
 	private JButton btn3;
 	private JButton btn4;
 	private JButton btn5;
-	private JButton btnSimulation;
+	private JButton btnMountainRace;
+	private JButton btnPlainWCurvesRace;
+	private JButton btnSemiPlainRace;
+	private JButton btnStraightPlainRace;
+	private JButton btnOneDayRace;
+	private JButton btnStartSimulation;
+	private JTextField fieldNewName;
+	private JTextField fieldNewPassword;
+	private JTextField fieldNewMail;
+	private JTextField fieldNewGender;
+	private JLabel textNewName;
+	private JLabel textNewPassword;
+	private JLabel textNewMail;
+	private JLabel textNewGender;
 	private JSeparator line1;
-	private JProgressBar simulation;
+	private JProgressBar simulationBar1;
 
 	public VentanaUsuario() {
 		setSize(800, 500);
@@ -54,33 +68,108 @@ public class VentanaUsuario extends JFrame{
 
 		panelSidebar = new JPanel();
 		panelSidebar.setLayout(null);
-		panelSidebar.setBounds(0, 0, 150, 500);
+		panelSidebar.setBounds(0, 0, 220, 500);
 		panelSidebar.setBackground(new Color(12, 116, 127));
 		
-		panel1 = new JPanel();
-		panel1.setLayout(null);
-		panel1.setBounds(150, 0, 650, 500);
-		panel1.setBackground(Color.green);
-		panel1.setVisible(false);
+		panelCreateTeam = new JPanel();
+		panelCreateTeam.setLayout(null);
+		panelCreateTeam.setBounds(150, 0, 650, 500);
+		panelCreateTeam.setBackground(Color.green);
+		panelCreateTeam.setVisible(false);
 
-		panel2 = new JPanel();
-		panel2.setLayout(null);
-		panel2.setBounds(150, 0, 650, 500);
-		panel2.setBackground(Color.yellow);
-		panel2.setVisible(false);
-		
-		
-		panel3 = new JPanel();
-		panel3.setLayout(null);
-		panel3.setBounds(150, 0, 650, 500);
-		panel3.setBackground(Color.blue);
-		panel3.setVisible(false);
+		panelUpdateProfile = new JPanel();
+		panelUpdateProfile.setLayout(null);
+		panelUpdateProfile.setBounds(0, 0, 800, 500);
+		panelUpdateProfile.setBackground(Color.yellow);
+		panelUpdateProfile.setVisible(false);
+	
+		textNewName = new JLabel();
+		textNewName.setText("New name");
+		textNewName.setBounds(0, 200, 90, 30);
+		textNewName.setFont(new Font("Tahoma", Font.BOLD, 15));
 
-		panel4 = new JPanel();
-		panel4.setLayout(null);
-		panel4.setBounds(150, 0, 650, 500);
-		panel4.setBackground(Color.pink);
-		panel4.setVisible(false);
+		fieldNewName = new JTextField();
+		fieldNewName.setBounds(100, 200, 150, 25);
+		fieldNewName.setFont(new Font("Tahoma", 0, 15));
+		fieldNewName.setBorder(null);
+		
+		textNewMail = new JLabel();
+		textNewMail.setText("New Mail");
+		textNewMail.setBounds(0, 160, 90, 30);
+		textNewMail.setFont(new Font("Tahoma", Font.BOLD, 15));
+
+		fieldNewMail = new JTextField();
+		fieldNewMail.setBounds(100, 160, 150, 25);
+		fieldNewMail.setFont(new Font("Tahoma", 0, 15));
+		fieldNewMail.setBorder(null);
+		
+		textNewPassword = new JLabel();
+		textNewPassword.setText("New Password");
+		textNewPassword.setBounds(0, 120, 90, 30);
+		textNewPassword.setFont(new Font("Tahoma", Font.BOLD, 15));
+
+		fieldNewPassword = new JTextField();
+		fieldNewPassword.setBounds(100, 120, 150, 25);
+		fieldNewPassword.setFont(new Font("Tahoma", 0, 15));
+		fieldNewPassword.setBorder(null);
+		
+		textNewGender = new JLabel();
+		textNewGender.setText("New Gender");
+		textNewGender.setBounds(0, 100, 90, 30);
+		textNewGender.setFont(new Font("Tahoma", Font.BOLD, 15));
+
+		fieldNewGender = new JTextField();
+		fieldNewGender.setBounds(100, 100, 150, 25);
+		fieldNewGender.setFont(new Font("Tahoma", 0, 15));
+		fieldNewGender.setBorder(null);
+		
+		//
+		panelViewOtherTeams = new JPanel();
+		panelViewOtherTeams.setLayout(null);
+		panelViewOtherTeams.setBounds(150, 0, 650, 500);
+		panelViewOtherTeams.setBackground(Color.blue);
+		panelViewOtherTeams.setVisible(false);
+		//
+		panelViewRaces = new JPanel();
+		panelViewRaces.setLayout(null);
+		panelViewRaces.setBounds(150, 0, 650, 500);
+		panelViewRaces.setBackground(Color.pink);
+		panelViewRaces.setVisible(false);
+		
+		btnMountainRace = new JButton("Mountain Race");
+		btnMountainRace.setBounds(0, 20, 150, 30);
+		btnMountainRace.setBackground(new Color(12, 116, 127));
+		btnMountainRace.setForeground(new Color(255, 255, 255));
+		btnMountainRace.setFont(new Font("Tahoma", Font.BOLD, 15));
+		btnMountainRace.setBorderPainted(true);
+		
+		btnPlainWCurvesRace = new JButton("Plain With Curves Race");
+		btnPlainWCurvesRace.setBounds(0, 60, 150, 30);
+		btnPlainWCurvesRace.setBackground(new Color(12, 116, 127));
+		btnPlainWCurvesRace.setForeground(new Color(255, 255, 255));
+		btnPlainWCurvesRace.setFont(new Font("Tahoma", Font.BOLD, 15));
+		btnPlainWCurvesRace.setBorderPainted(true);
+		
+		btnSemiPlainRace = new JButton("Semi Plain Race");
+		btnSemiPlainRace.setBounds(0, 100, 150, 30);
+		btnSemiPlainRace.setBackground(new Color(12, 116, 127));
+		btnSemiPlainRace.setForeground(new Color(255, 255, 255));
+		btnSemiPlainRace.setFont(new Font("Tahoma", Font.BOLD, 15));
+		btnSemiPlainRace.setBorderPainted(true);
+		
+		btnStraightPlainRace = new JButton("Straight Plain Race");
+		btnStraightPlainRace.setBounds(0, 140, 150, 30);
+		btnStraightPlainRace.setBackground(new Color(12, 116, 127));
+		btnStraightPlainRace.setForeground(new Color(255, 255, 255));
+		btnStraightPlainRace.setFont(new Font("Tahoma", Font.BOLD, 15));
+		btnStraightPlainRace.setBorderPainted(true);
+		
+		btnOneDayRace = new JButton("One Day Race");
+		btnOneDayRace.setBounds(0, 140, 150, 30);
+		btnOneDayRace.setBackground(new Color(12, 116, 127));
+		btnOneDayRace.setForeground(new Color(255, 255, 255));
+		btnOneDayRace.setFont(new Font("Tahoma", Font.BOLD, 15));
+		btnOneDayRace.setBorderPainted(true);
 
 		textAdmin = new JLabel();
 		textAdmin.setText("");
@@ -102,55 +191,56 @@ public class VentanaUsuario extends JFrame{
 
 		
 		btn1 = new JButton("CREATE YOUR TEAM");
-		btn1.setBounds(0, 175, 150, 30);
+		btn1.setBounds(0, 175, 200, 30);
 		btn1.setBackground(new Color(12, 116, 127));
 		btn1.setForeground(new Color(255, 255, 255));
-		btn1.setFont(new Font("Tahoma", Font.BOLD, 25));
+		btn1.setFont(new Font("Tahoma", Font.BOLD, 15));
 		btn1.setBorderPainted(false);
 		
 		btn2 = new JButton("OTHER TEAMS");
-		btn2.setBounds(0, 225, 150, 30);
+		btn2.setBounds(0, 225, 200, 30);
 		btn2.setBackground(new Color(12, 116, 127));
 		btn2.setForeground(new Color(255, 255, 255));
-		btn2.setFont(new Font("Tahoma", Font.BOLD, 25));
+		btn2.setFont(new Font("Tahoma", Font.BOLD, 20));
 		btn2.setBorderPainted(false);
 		
-		btn3 = new JButton("UPDATE YOUR PROFILE");
-		btn3.setBounds(0, 275, 150, 30);
+		btn3 = new JButton("UPDATE PROFILE");
+		btn3.setBounds(0, 275, 200, 30);
 		btn3.setBackground(new Color(12, 116, 127));
 		btn3.setForeground(new Color(255, 255, 255));
-		btn3.setFont(new Font("Tahoma", Font.BOLD, 25));
+		btn3.setFont(new Font("Tahoma", Font.BOLD, 15));
 		btn3.setBorderPainted(false);
 		
 		btn4 = new JButton("VIEW RACES");
-		btn4.setBounds(0, 325, 150, 30);
+		btn4.setBounds(0, 325, 200, 30);
 		btn4.setBackground(new Color(12, 116, 127));
 		btn4.setForeground(new Color(255, 255, 255));
-		btn4.setFont(new Font("Tahoma", Font.BOLD, 25));
+		btn4.setFont(new Font("Tahoma", Font.BOLD, 20));
 		btn4.setBorderPainted(false);
 		
 		btn5 = new JButton("RESULTS");
-		btn5.setBounds(0, 325, 150, 30);
+		btn5.setBounds(0, 325, 200, 30);
 		btn5.setBackground(new Color(12, 116, 127));
 		btn5.setForeground(new Color(255, 255, 255));
-		btn5.setFont(new Font("Tahoma", Font.BOLD, 25));
+		btn5.setFont(new Font("Tahoma", Font.BOLD, 20));
 		btn5.setBorderPainted(false);
 		
-		btnSimulation = new JButton("Start Simulation");
-		btnSimulation.setBounds(0, 325, 150, 30);
-		btnSimulation.setBackground(new Color(12, 116, 127));
-		btnSimulation.setForeground(new Color(255, 255, 255));
-		btnSimulation.setFont(new Font("Tahoma", Font.BOLD, 25));
-		btnSimulation.setBorderPainted(false);
+		btnStartSimulation = new JButton("Start simulation");
+		btnStartSimulation.setBounds(0, 325, 150, 30);
+		btnStartSimulation.setBackground(new Color(12, 116, 127));
+		btnStartSimulation.setForeground(new Color(255, 255, 255));
+		btnStartSimulation.setFont(new Font("Tahoma", Font.BOLD, 25));
+		btnStartSimulation.setBorderPainted(false);
 		
-		simulation = new JProgressBar();
-		simulation.setBounds(0, 275, 300, 127);
-		simulation.setBackground(new Color(12, 116, 127));
-		simulation.setForeground(new Color(255, 255, 255));
-		simulation.setFont(new Font("Tahoma", Font.BOLD, 25));
-		simulation.setBorderPainted(true);
-		simulation.setStringPainted(true);
+		simulationBar1 = new JProgressBar();
+		simulationBar1.setBounds(0, 275, 300, 127);
+		simulationBar1.setBackground(new Color(12, 116, 127));
+		simulationBar1.setForeground(new Color(255, 255, 255));
+		simulationBar1.setFont(new Font("Tahoma", Font.BOLD, 25));
+		simulationBar1.setBorderPainted(true);
+		simulationBar1.setStringPainted(true);
 		
+	
 
 		add(panelUser);
 		panelUser.add(panelSidebar);
@@ -162,19 +252,19 @@ public class VentanaUsuario extends JFrame{
 		panelSidebar.add(btn3);
 		panelSidebar.add(btn4);
 		panelSidebar.add(btnLogout);
-		panelUser.add(panel1);
-		panelUser.add(panel2);
-		panelUser.add(panel3);
-		panelUser.add(panel4);
-		panel4.add(simulation);
+		panelUser.add(panelCreateTeam);
+		panelUser.add(panelUpdateProfile);
+		panelUser.add(panelViewOtherTeams);
+		panelUser.add(panelViewRaces);
+		panelViewRaces.add(simulationBar1);
 	}
 
-	public JButton getBtnSimulation() {
-		return btnSimulation;
+	public JButton getBtnsimulationBar1() {
+		return btnStartSimulation;
 	}
 
-	public void setBtnSimulation(JButton btnSimulation) {
-		this.btnSimulation = btnSimulation;
+	public void setBtnsimulationBar1(JButton btnsimulationBar1) {
+		this.btnStartSimulation = btnsimulationBar1;
 	}
 
 	public JPanel getpanelUser() {
@@ -193,36 +283,36 @@ public class VentanaUsuario extends JFrame{
 		this.panelSidebar = panelSidebar;
 	}
 
-	public JPanel getPanel1() {
-		return panel1;
+	public JPanel getpanelCreateTeam() {
+		return panelCreateTeam;
 	}
 
-	public void setPanel1(JPanel panel1) {
-		this.panel1 = panel1;
+	public void setpanelCreateTeam(JPanel panelCreateTeam) {
+		this.panelCreateTeam = panelCreateTeam;
 	}
 
-	public JPanel getPanel2() {
-		return panel2;
+	public JPanel getpanelUpdateProfile() {
+		return panelUpdateProfile;
 	}
 
-	public void setPanel2(JPanel panel2) {
-		this.panel2 = panel2;
+	public void setpanelUpdateProfile(JPanel panelUpdateProfile) {
+		this.panelUpdateProfile = panelUpdateProfile;
 	}
 
-	public JPanel getPanel3() {
-		return panel3;
+	public JPanel getpanelViewOtherTeams() {
+		return panelViewOtherTeams;
 	}
 
-	public void setPanel3(JPanel panel3) {
-		this.panel3 = panel3;
+	public void setpanelViewOtherTeams(JPanel panelViewOtherTeams) {
+		this.panelViewOtherTeams = panelViewOtherTeams;
 	}
 
-	public JPanel getPanel4() {
-		return panel4;
+	public JPanel getpanelViewRaces() {
+		return panelViewRaces;
 	}
 
-	public void setPanel4(JPanel panel4) {
-		this.panel4 = panel4;
+	public void setpanelViewRaces(JPanel panelViewRaces) {
+		this.panelViewRaces = panelViewRaces;
 	}
 
 	public JLabel getTextAdmin() {
@@ -305,12 +395,12 @@ public class VentanaUsuario extends JFrame{
 		this.panelUser = panelUser;
 	}
 
-	public JProgressBar getSimulation() {
-		return simulation;
+	public JProgressBar getsimulationBar1() {
+		return simulationBar1;
 	}
 
-	public void setSimulation(JProgressBar simulation) {
-		this.simulation = simulation;
+	public void setsimulationBar1(JProgressBar simulationBar1) {
+		this.simulationBar1 = simulationBar1;
 	}
 	
 	
