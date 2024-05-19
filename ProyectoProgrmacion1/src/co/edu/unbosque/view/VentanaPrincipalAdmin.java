@@ -54,7 +54,7 @@ public class VentanaPrincipalAdmin extends JFrame {
 		setLocationRelativeTo(null);
 
 		logo = new JLabel();
-		logo.setBounds(32, 10, 100, 100);
+		logo.setBounds(25, 10, 100, 100);
 
 		ImageIcon img = new ImageIcon("src/co/edu/unbosque/view/image/admin.png");
 		Icon icon = new ImageIcon(
@@ -83,7 +83,7 @@ public class VentanaPrincipalAdmin extends JFrame {
 		panelSidebar = new JPanel();
 		panelSidebar.setLayout(null);
 		panelSidebar.setBounds(0, 0, 150, 500);
-		panelSidebar.setBackground(new Color(12, 116, 127));
+		panelSidebar.setBackground(new Color(0, 0, 0 ));
 
 		panelShowU = new JPanel();
 		panelShowU.setLayout(null);

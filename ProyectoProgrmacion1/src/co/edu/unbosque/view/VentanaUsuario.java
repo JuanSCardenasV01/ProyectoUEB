@@ -54,9 +54,9 @@ public class VentanaUsuario extends JFrame{
 		setLocationRelativeTo(null);
 
 		logo = new JLabel();
-		logo.setBounds(32, 10, 100, 100);
+		logo.setBounds(25, 5, 100, 100);
 
-		ImageIcon img = new ImageIcon("src/co/edu/unbosque/view/image/admin.png");
+		ImageIcon img = new ImageIcon("src/co/edu/unbosque/view/image/logoUser.png");
 		Icon icon = new ImageIcon(
 				img.getImage().getScaledInstance(logo.getWidth(), logo.getHeight(), Image.SCALE_DEFAULT));
 		logo.setIcon(icon);
@@ -68,8 +68,8 @@ public class VentanaUsuario extends JFrame{
 
 		panelSidebar = new JPanel();
 		panelSidebar.setLayout(null);
-		panelSidebar.setBounds(0, 0, 220, 500);
-		panelSidebar.setBackground(new Color(12, 116, 127));
+		panelSidebar.setBounds(0, 0, 150, 500);
+		panelSidebar.setBackground(new Color(0, 0, 0));
 		
 		panelCreateTeam = new JPanel();
 		panelCreateTeam.setLayout(null);
@@ -173,56 +173,56 @@ public class VentanaUsuario extends JFrame{
 
 		textAdmin = new JLabel();
 		textAdmin.setText("");
-		textAdmin.setBounds(25, 100, 150, 50);
+		textAdmin.setBounds(25, 90, 150, 50);
 		textAdmin.setForeground(Color.WHITE);
 		textAdmin.setHorizontalAlignment(SwingConstants.CENTER);
-		textAdmin.setFont(new Font("Tahoma", Font.BOLD, 15));
+		textAdmin.setFont(new Font("Tahoma", Font.BOLD, 10));
 
 		line1 = new JSeparator();
-		line1.setBounds(25, 140, 100, 20);
-		line1.setForeground(Color.white);
+		line1.setBounds(25, 120, 100, 20);
+		line1.setForeground(new Color(246, 71, 71));
 
 		btnLogout = new JButton("Logout");
 		btnLogout.setBounds(25, 400, 100, 25);
 		btnLogout.setBackground(Color.red);
 		btnLogout.setForeground(new Color(255, 255, 255));
-		btnLogout.setFont(new Font("Tahoma", Font.BOLD, 15));
+		btnLogout.setFont(new Font("Tahoma", Font.BOLD, 10));
 		btnLogout.setBorderPainted(false);
 
 		
 		btnCreateTeam = new JButton("CREATE YOUR TEAM");
-		btnCreateTeam.setBounds(0, 175, 200, 30);
-		btnCreateTeam.setBackground(new Color(12, 116, 127));
+		btnCreateTeam.setBounds(0, 150, 150, 30);
+		btnCreateTeam.setBackground(new Color(246, 71, 71));
 		btnCreateTeam.setForeground(new Color(255, 255, 255));
-		btnCreateTeam.setFont(new Font("Tahoma", Font.BOLD, 15));
+		btnCreateTeam.setFont(new Font("Tahoma", Font.BOLD, 10));
 		btnCreateTeam.setBorderPainted(false);
 		
 		btnOtherTeams = new JButton("OTHER TEAMS");
-		btnOtherTeams.setBounds(0, 225, 200, 30);
-		btnOtherTeams.setBackground(new Color(12, 116, 127));
+		btnOtherTeams.setBounds(0, 200, 150, 30);
+		btnOtherTeams.setBackground(new Color(246, 71, 71));
 		btnOtherTeams.setForeground(new Color(255, 255, 255));
-		btnOtherTeams.setFont(new Font("Tahoma", Font.BOLD, 20));
+		btnOtherTeams.setFont(new Font("Tahoma", Font.BOLD, 10));
 		btnOtherTeams.setBorderPainted(false);
 		
 		btnUpdateProfile = new JButton("UPDATE PROFILE");
-		btnUpdateProfile.setBounds(0, 275, 200, 30);
-		btnUpdateProfile.setBackground(new Color(12, 116, 127));
+		btnUpdateProfile.setBounds(0, 250, 150, 30);
+		btnUpdateProfile.setBackground(new Color(246, 71, 71));
 		btnUpdateProfile.setForeground(new Color(255, 255, 255));
-		btnUpdateProfile.setFont(new Font("Tahoma", Font.BOLD, 15));
+		btnUpdateProfile.setFont(new Font("Tahoma", Font.BOLD, 10));
 		btnUpdateProfile.setBorderPainted(false);
 		
 		btnViewRaces = new JButton("VIEW RACES");
-		btnViewRaces.setBounds(0, 325, 200, 30);
-		btnViewRaces.setBackground(new Color(12, 116, 127));
+		btnViewRaces.setBounds(0, 300, 150, 30);
+		btnViewRaces.setBackground(new Color(246, 71, 71));
 		btnViewRaces.setForeground(new Color(255, 255, 255));
-		btnViewRaces.setFont(new Font("Tahoma", Font.BOLD, 20));
+		btnViewRaces.setFont(new Font("Tahoma", Font.BOLD, 10));
 		btnViewRaces.setBorderPainted(false);
 		
 		btnResults = new JButton("RESULTS");
-		btnResults.setBounds(0, 325, 200, 30);
-		btnResults.setBackground(new Color(12, 116, 127));
+		btnResults.setBounds(0, 350, 150, 30);
+		btnResults.setBackground(new Color(246, 71, 71));
 		btnResults.setForeground(new Color(255, 255, 255));
-		btnResults.setFont(new Font("Tahoma", Font.BOLD, 20));
+		btnResults.setFont(new Font("Tahoma", Font.BOLD, 10));
 		btnResults.setBorderPainted(false);
 		
 		btnStartSimulation = new JButton("Start simulation");
@@ -251,6 +251,7 @@ public class VentanaUsuario extends JFrame{
 		panelSidebar.add(btnOtherTeams);
 		panelSidebar.add(btnUpdateProfile);
 		panelSidebar.add(btnViewRaces);
+		panelSidebar.add(btnResults);
 		panelSidebar.add(btnLogout);
 		panelUser.add(panelCreateTeam);
 		panelUser.add(panelUpdateProfile);

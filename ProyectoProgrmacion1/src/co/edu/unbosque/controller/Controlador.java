@@ -32,7 +32,7 @@ public class Controlador implements ActionListener {
 
 	// Método que hace visible la ventana de registro inicialmente.
 	public void run() {
-		vF.getVenUsu().getPanelViewRaces().setVisible(true);
+		vF.getVenUsu().setVisible(true);
 		
 	}
 
@@ -63,6 +63,10 @@ public class Controlador implements ActionListener {
 		vF.getVenUsu().getBtnViewRaces().setActionCommand("btnViewRaces");
 		vF.getVenUsu().getBtnCreateTeam().addActionListener(this);
 		vF.getVenUsu().getBtnCreateTeam().setActionCommand("btnCreateTeam");
+		vF.getVenUsu().getBtnOtherTeams().addActionListener(this);
+		vF.getVenUsu().getBtnOtherTeams().setActionCommand("btnOtherTeams");
+		vF.getVenUsu().getBtnUpdateProfile().addActionListener(this);
+		vF.getVenUsu().getBtnUpdateProfile().setActionCommand("bnUpdateProfile");
 
 	}
 
@@ -233,6 +237,42 @@ public class Controlador implements ActionListener {
 
 			break;
 		}
+		
+		
+		// USURIO
+		case "btnViewRaces": {
+			vF.getVenUsu().getPanelViewRaces().setVisible(true);
+			vF.getVenUsu().getPanelCreateTeam().setVisible(false);
+			vF.getVenUsu().getPanelViewOtherTeams().setVisible(false);
+			vF.getVenUsu().getPanelUpdateProfile().setVisible(false);
+			break;
+		}
+		case "btnCreateTeam": {
+			vF.getVenUsu().getPanelViewRaces().setVisible(false);
+			vF.getVenUsu().getPanelCreateTeam().setVisible(true);
+			vF.getVenUsu().getPanelViewOtherTeams().setVisible(false);
+			vF.getVenUsu().getPanelUpdateProfile().setVisible(false);
+			break;
+		}
+		case "btnOtherTeams": {
+			vF.getVenUsu().getPanelViewRaces().setVisible(false);
+			vF.getVenUsu().getPanelCreateTeam().setVisible(false);
+			vF.getVenUsu().getPanelViewOtherTeams().setVisible(true);
+			vF.getVenUsu().getPanelUpdateProfile().setVisible(false);
+			break;
+		}
+		case "bnUpdateProfile": {
+			vF.getVenUsu().getPanelViewRaces().setVisible(false);
+			vF.getVenUsu().getPanelCreateTeam().setVisible(false);
+			vF.getVenUsu().getPanelViewOtherTeams().setVisible(false);
+			vF.getVenUsu().getPanelUpdateProfile().setVisible(true);
+			break;
+		}
+		
+		
+		
+		
+		
 //		Maneja el clic en el botón "Registrarse" en la ventana de registro.
 //		Crea nuevos objetos UsuarioDTO y DirectorDTO basados en la información ingresada.
 //		Guarda el nuevo usuario y director en la base de datos.
