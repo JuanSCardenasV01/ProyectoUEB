@@ -30,6 +30,7 @@ public class VentanaUsuario extends JFrame{
 	private JButton btn3;
 	private JButton btn4;
 	private JButton btn5;
+	private JButton btnSimulation;
 	private JSeparator line1;
 	private JProgressBar simulation;
 
@@ -135,7 +136,21 @@ public class VentanaUsuario extends JFrame{
 		btn5.setFont(new Font("Tahoma", Font.BOLD, 25));
 		btn5.setBorderPainted(false);
 		
-	
+		btnSimulation = new JButton("Start Simulation");
+		btnSimulation.setBounds(0, 325, 150, 30);
+		btnSimulation.setBackground(new Color(12, 116, 127));
+		btnSimulation.setForeground(new Color(255, 255, 255));
+		btnSimulation.setFont(new Font("Tahoma", Font.BOLD, 25));
+		btnSimulation.setBorderPainted(false);
+		
+		simulation = new JProgressBar();
+		simulation.setBounds(0, 275, 300, 127);
+		simulation.setBackground(new Color(12, 116, 127));
+		simulation.setForeground(new Color(255, 255, 255));
+		simulation.setFont(new Font("Tahoma", Font.BOLD, 25));
+		simulation.setBorderPainted(true);
+		simulation.setStringPainted(true);
+		
 
 		add(panelUser);
 		panelUser.add(panelSidebar);
@@ -151,6 +166,15 @@ public class VentanaUsuario extends JFrame{
 		panelUser.add(panel2);
 		panelUser.add(panel3);
 		panelUser.add(panel4);
+		panel4.add(simulation);
+	}
+
+	public JButton getBtnSimulation() {
+		return btnSimulation;
+	}
+
+	public void setBtnSimulation(JButton btnSimulation) {
+		this.btnSimulation = btnSimulation;
 	}
 
 	public JPanel getpanelUser() {
@@ -271,6 +295,22 @@ public class VentanaUsuario extends JFrame{
 
 	public void setBtn5(JButton btn5) {
 		this.btn5 = btn5;
+	}
+
+	public JPanel getPanelUser() {
+		return panelUser;
+	}
+
+	public void setPanelUser(JPanel panelUser) {
+		this.panelUser = panelUser;
+	}
+
+	public JProgressBar getSimulation() {
+		return simulation;
+	}
+
+	public void setSimulation(JProgressBar simulation) {
+		this.simulation = simulation;
 	}
 	
 	

@@ -33,7 +33,7 @@ public class Controlador implements ActionListener {
 	// Método que hace visible la ventana de registro inicialmente.
 	public void run() {
 		vF.getVenRe().setVisible(true);
-
+		
 	}
 
 	// Método que asigna ActionListeners a los botones y combobox para escuchar
@@ -59,6 +59,8 @@ public class Controlador implements ActionListener {
 		vF.getVenRe().getBtnRegister().setActionCommand("btnRegister");
 		vF.getVenRe().getComboBoxOcupation().addActionListener(this);
 		vF.getVenRe().getComboBoxOcupation().setActionCommand("comboBoxG");
+		vF.getVenUsu().getBtn4().addActionListener(this);
+		vF.getVenUsu().getBtn4().setActionCommand("btn4");
 
 	}
 
@@ -76,10 +78,11 @@ public class Controlador implements ActionListener {
 
 			if (usuario != null) {
 				if (user.equals("admin") && password.equals("123")) {
+					vF.getVenUsu().setVisible(false);
 					vF.getVenPA().setVisible(true); // Mostrar panel de administrador
 				} else {
 					vF.getVenUsu().setVisible(true);
-					vF.getVenUsu().getTextAdmin().setText(user);
+										
 				}
 			} else {
 				JOptionPane.showMessageDialog(null, "Usuario o contraseña incorrectos", "Error de inicio de sesión",
