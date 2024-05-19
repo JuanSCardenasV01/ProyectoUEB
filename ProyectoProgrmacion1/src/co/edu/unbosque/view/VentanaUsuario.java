@@ -257,6 +257,7 @@ public class VentanaUsuario extends JFrame{
 		panelUser.add(panelViewOtherTeams);
 		panelUser.add(panelViewRaces);
 		panelViewRaces.add(simulationBar1);
+		panelViewRaces.add(panelSidebar);
 		panelViewRaces.add(btnMountainRace);
 		panelViewRaces.add(btnOneDayRace);
 		panelViewRaces.add(btnPlainWCurvesRace);

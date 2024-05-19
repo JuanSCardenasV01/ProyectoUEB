@@ -3,6 +3,7 @@ package co.edu.unbosque.view;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Image;
+import java.util.ArrayList;
 
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
@@ -12,7 +13,12 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JSeparator;
+import javax.swing.JTable;
 import javax.swing.JTextField;
+import javax.swing.table.DefaultTableModel;
+
+import co.edu.unbosque.model.UsuarioDTO;
+import co.edu.unbosque.model.CiclistaDTO;
 
 public class VentanaPrincipalAdmin extends JFrame {
 
@@ -22,6 +28,7 @@ public class VentanaPrincipalAdmin extends JFrame {
 	private JPanel panelDeleteT;
 	private JPanel panelShowU;
 	private JPanel panelShowT;
+	private JPanel panelTableUsers;
 	private JLabel textAdmin;
 	private JLabel textDeleteU;
 	private JLabel textDeleteT;
@@ -38,6 +45,8 @@ public class VentanaPrincipalAdmin extends JFrame {
 	private JSeparator line1;
 	private JSeparator line2;
 	private JSeparator line3;
+	private JTable tableUsers;
+	private JTable tableTeams;
 
 	public VentanaPrincipalAdmin() {
 		setSize(800, 500);
@@ -51,7 +60,21 @@ public class VentanaPrincipalAdmin extends JFrame {
 		Icon icon = new ImageIcon(
 				img.getImage().getScaledInstance(logo.getWidth(), logo.getHeight(), Image.SCALE_DEFAULT));
 		logo.setIcon(icon);
-
+		
+		panelTableUsers = new JPanel();
+		panelTableUsers.setLayout(null);
+		panelTableUsers.setBounds(0, 0, 800, 500);
+		panelTableUsers.setBackground(new Color(255, 255, 255));
+		
+			tableUsers = new JTable();
+			tableUsers.setLayout(null);
+			tableUsers.setBounds(0, 0, 800, 500);
+			tableUsers.setBackground(new Color(255, 255, 255));
+			
+			String[] columnNames = {"Id", "Name", "Mail", "Password", "Gender"};
+			DefaultTableModel model = new DefaultTableModel(columnNames, 0);
+			
+			
 		panelAdmin = new JPanel();
 		panelAdmin.setLayout(null);
 		panelAdmin.setBounds(0, 0, 800, 500);
